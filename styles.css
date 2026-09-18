@@ -126,7 +126,8 @@ kbd { padding: 4px 7px; border: 1px solid rgba(255,255,255,.08); border-radius: 
 .dependency-line i { flex: 1; height: 1px; background: rgba(255,255,255,.11); }
 
 .security { display: grid; align-content: center; }
-.security .section-copy { margin-top: -20vh; }
+.security .section-copy { max-width: 760px; margin-top: -20vh; }
+.security .section-copy > p { max-width: 620px; }
 .auth-flow { position: absolute; inset: 49% var(--page-pad) auto; display: grid; grid-template-columns: 1fr minmax(30px, 9vw) 1fr minmax(30px, 9vw) 1fr; align-items: center; }
 .flow-node { display: flex; flex-direction: column; min-height: 135px; padding: 18px; }
 .flow-node span { color: rgba(255,255,255,.24); font: 9px/1 ui-monospace, monospace; }
@@ -148,6 +149,16 @@ footer p { grid-column: 1 / -1; margin: -22px 0 0; color: rgba(255,255,255,.2); 
 
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 900ms var(--ease) var(--delay, 0ms), transform 900ms var(--ease) var(--delay, 0ms); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (min-width: 821px) and (max-height: 650px) {
+  .security { display: block; padding-top: 82px; }
+  .security .section-copy { max-width: 820px; margin-top: 0; }
+  .security .section-copy h2 { margin-top: 12px; font-size: 38px; line-height: 1.02; }
+  .security .section-copy > p { max-width: 700px; margin-top: 12px; line-height: 1.5; }
+  .auth-flow { top: 335px; }
+  .flow-node { min-height: 112px; padding: 15px; }
+  .security-notes { display: none; }
+}
 
 .legal-body { overflow: auto; }
 .legal-header { position: sticky; top: 16px; }
