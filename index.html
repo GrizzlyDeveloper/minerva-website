@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Minerva is a focused Windows launcher and instance manager for Minecraft: Java Edition." />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Minerva" />
+    <meta property="og:description" content="Minecraft instances, Fabric content, and diagnostics in one focused launcher." />
+    <meta property="og:image" content="https://grizzlydeveloper.github.io/Minerva-Website/assets/minerva-app.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grizzlydeveloper.github.io/Minerva-Website/" />
+    <link rel="canonical" href="https://grizzlydeveloper.github.io/Minerva-Website/" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Minerva | Minecraft Java Launcher</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#concept" aria-label="Minerva home"><span class="brand-mark" aria-hidden="true">M</span><span>MINERVA</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" title="Menu"><span></span><span></span></button>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#product">Product</a><a href="#content">Content</a><a href="#security">Security</a>
+      </nav>
+      <a class="pill header-cta" href="#status">Development status <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="landing-scroll" data-scroll-container>
+      <section class="hero snap-section" id="concept" aria-labelledby="hero-title">
+        <img class="hero-media" src="assets/minerva-app.png" alt="Minerva instance management interface" />
+        <div class="hero-veil" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="caption">Minecraft Java launcher / Windows</p>
+          <h1 id="hero-title">Minerva.</h1>
+          <p class="hero-statement">Everything between you and the game, reduced to what matters.</p>
+          <p class="hero-copy">Isolated instances, Fabric content, shared resources, and transparent diagnostics in one focused desktop launcher.</p>
+          <div class="hero-actions"><a class="pill pill-strong" href="#product">Explore the product <span aria-hidden="true">↓</span></a><a class="pill" href="#status">View status</a></div>
+        </div>
+        <div class="hero-footer"><span>Built by Grizzly Dev</span><span class="scroll-cue"><i></i> Scroll to inspect</span></div>
+      </section>
+
+      <section class="showcase snap-section" id="product">
+        <div class="section-copy reveal">
+          <div class="section-kicker"><span>01</span><span>THE LAUNCHER</span></div>
+          <h2>Separate worlds.<br />One quiet system.</h2>
+          <p>Every setup keeps its own mods, saves, logs, memory, and launch state. Minerva manages the complexity without turning the launcher into the destination.</p>
+        </div>
+        <div class="product-stage reveal" style="--delay: 120ms">
+          <div class="stage-aura" aria-hidden="true"></div>
+          <figure class="app-window glass-panel">
+            <figcaption><span><i class="window-dot"></i> MINERVA / INSTANCES</span><span>DEVELOPMENT BUILD</span></figcaption>
+            <img src="assets/minerva-app.png" alt="Instances screen in the Minerva desktop application" />
+          </figure>
+        </div>
+        <div class="signal-row reveal" aria-label="Product principles">
+          <div><strong>Isolated</strong><span>Instance state</span></div><div><strong>Shared</strong><span>Verified cache</span></div><div><strong>Local</strong><span>Diagnostics</span></div>
+        </div>
+      </section>
+
+      <section class="capabilities snap-section" id="content">
+        <div class="section-copy reveal">
+          <div class="section-kicker"><span>02</span><span>CONTENT SYSTEM</span></div>
+          <h2>Add what belongs.<br />Know why it works.</h2>
+          <p>Minerva resolves compatible content for the selected Minecraft and loader versions, then keeps every change visible and recoverable.</p>
+        </div>
+        <div class="capability-grid reveal" style="--delay: 100ms">
+          <article class="glass-panel feature feature-large">
+            <span class="feature-number">01 / DISCOVER</span>
+            <div><h3>Modrinth, in context.</h3><p>Search against the active instance. Compatibility, loader, game version, and dependencies remain part of the decision.</p></div>
+            <div class="mini-search" aria-hidden="true"><span>Search compatible content</span><kbd>Ctrl K</kbd></div>
+          </article>
+          <article class="glass-panel feature">
+            <span class="feature-number">02 / IMPORT</span>
+            <div><h3>Local files stay first-class.</h3><p>Install a mod JAR from your computer directly into the selected instance.</p></div>
+            <span class="feature-action">IMPORT FROM FILES <i>↗</i></span>
+          </article>
+          <article class="glass-panel feature">
+            <span class="feature-number">03 / RESOLVE</span>
+            <div><h3>No surprise dependencies.</h3><p>Review required additions and incompatibilities before installation begins.</p></div>
+            <div class="dependency-line" aria-hidden="true"><span>MOD</span><i></i><span>API</span><i></i><span>READY</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="security snap-section" id="security">
+        <div class="section-copy reveal">
+          <div class="section-kicker"><span>03</span><span>TRUST MODEL</span></div>
+          <h2>Your account is not<br />launcher content.</h2>
+          <p>Minerva uses the official Microsoft authorization path and keeps ownership checks intact. Your Microsoft password is never entered into Minerva.</p>
+        </div>
+        <div class="auth-flow reveal" style="--delay: 100ms" aria-label="Authentication flow">
+          <div class="flow-node glass-panel"><span>01</span><strong>Microsoft</strong><small>Device authorization</small></div><i class="flow-line"></i>
+          <div class="flow-node glass-panel"><span>02</span><strong>Xbox Live</strong><small>Identity chain</small></div><i class="flow-line"></i>
+          <div class="flow-node glass-panel"><span>03</span><strong>Minecraft</strong><small>Ownership verification</small></div>
+        </div>
+        <div class="security-notes reveal"><span>NO PASSWORD COLLECTION</span><span>NO OWNERSHIP BYPASS</span><span>LOCAL ACCOUNT STORAGE</span></div>
+      </section>
+
+      <section class="final-section snap-section" id="status">
+        <div class="final-word" aria-hidden="true">MINERVA</div>
+        <div class="final-content reveal">
+          <div class="section-kicker"><span>04</span><span>DEVELOPMENT PREVIEW</span></div>
+          <h2>Built carefully.<br />Released when ready.</h2>
+          <p>Minerva is under active private development. Public downloads will appear after authentication approval and release-safety checks are complete.</p>
+          <div class="status-line"><i></i><span>Active development</span></div>
+        </div>
+        <footer>
+          <a class="brand footer-brand" href="#concept"><span class="brand-mark" aria-hidden="true">M</span><span>MINERVA</span></a>
+          <nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/GrizzlyDeveloper" rel="noreferrer">Grizzly Dev</a></nav>
+          <p>Not affiliated with Mojang Studios or Microsoft.</p>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

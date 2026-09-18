@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://grizzlydeveloper.github.io/Minerva-Website/sitemap.xml
