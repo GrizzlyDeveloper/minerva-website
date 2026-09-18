@@ -16,14 +16,17 @@
     <script src="script.js" defer></script>
     <title>Minerva | Лаунчер Minecraft Java</title>
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
       <a class="brand" href="#concept" aria-label="Главная Minerva"><span class="brand-mark" aria-hidden="true">M</span><span>MINERVA</span></a>
       <button class="nav-toggle" type="button" aria-label="Открыть навигацию" aria-expanded="false" title="Меню"><span></span><span></span></button>
       <nav class="header-nav" aria-label="Основная навигация">
-        <a href="#product">Продукт</a><a href="#content">Контент</a><a href="#security">Безопасность</a>
+        <a href="#product" data-i18n="nav.product">Продукт</a><a href="#content" data-i18n="nav.content">Контент</a><a href="#security" data-i18n="nav.security">Безопасность</a>
       </nav>
-      <a class="pill header-cta" href="#status">Статус разработки <span aria-hidden="true">↗</span></a>
+      <div class="header-tools">
+        <div class="language-switch" role="group" aria-label="Выбор языка"><span class="language-thumb" aria-hidden="true"></span><button type="button" data-language="ru" class="is-active">RU</button><button type="button" data-language="en">EN</button></div>
+        <a class="pill header-cta" href="#status"><span data-i18n="nav.status">Статус разработки</span> <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
     <main class="landing-scroll" data-scroll-container>
@@ -31,84 +34,84 @@
         <img class="hero-media" src="assets/minerva-app.png" alt="Интерфейс управления инстансами Minerva" />
         <div class="hero-veil" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-content reveal">
-          <p class="caption">Лаунчер Minecraft Java / Windows</p>
+          <p class="caption" data-i18n="hero.caption">Лаунчер Minecraft Java / Windows</p>
           <h1 id="hero-title">Minerva.</h1>
-          <p class="hero-statement">Между вами и игрой остаётся только то, что действительно важно.</p>
-          <p class="hero-copy">Изолированные инстансы, контент Fabric, общие ресурсы и прозрачная диагностика в одном сфокусированном лаунчере.</p>
-          <div class="hero-actions"><a class="pill pill-strong" href="#product">Посмотреть продукт <span aria-hidden="true">↓</span></a><a class="pill" href="#status">Статус</a></div>
+          <p class="hero-statement" data-i18n="hero.statement">Между вами и игрой остаётся только то, что действительно важно.</p>
+          <p class="hero-copy" data-i18n="hero.copy">Изолированные инстансы, контент Fabric, общие ресурсы и прозрачная диагностика в одном сфокусированном лаунчере.</p>
+          <div class="hero-actions"><a class="pill pill-strong" href="#product"><span data-i18n="hero.explore">Посмотреть продукт</span> <span aria-hidden="true">↓</span></a><a class="pill" href="#status" data-i18n="hero.status">Статус</a></div>
         </div>
-        <div class="hero-footer"><span>Разработка Grizzly Dev</span><span class="scroll-cue"><i></i> Листайте дальше</span></div>
+        <div class="hero-footer"><span data-i18n="hero.by">Разработка Grizzly Dev</span><span class="scroll-cue"><i></i> <span data-i18n="hero.scroll">Листайте дальше</span></span></div>
       </section>
 
       <section class="showcase snap-section" id="product">
         <div class="section-copy reveal">
-          <div class="section-kicker"><span>01</span><span>ЛАУНЧЕР</span></div>
-          <h2>Разные миры.<br />Одна цельная система.</h2>
-          <p>Каждая сборка хранит свои моды, сохранения, логи, память и состояние запуска. Minerva управляет сложностью, не вставая между вами и игрой.</p>
+          <div class="section-kicker"><span>01</span><span data-i18n="product.kicker">ЛАУНЧЕР</span></div>
+          <h2 data-i18n="product.title">Разные миры.<br />Одна цельная система.</h2>
+          <p data-i18n="product.copy">Каждая сборка хранит свои моды, сохранения, логи, память и состояние запуска. Minerva управляет сложностью, не вставая между вами и игрой.</p>
         </div>
         <div class="product-stage reveal" style="--delay: 120ms">
           <div class="stage-aura" aria-hidden="true"></div>
           <figure class="app-window glass-panel">
-            <figcaption><span><i class="window-dot"></i> MINERVA / ИНСТАНСЫ</span><span>ВЕРСИЯ В РАЗРАБОТКЕ</span></figcaption>
+            <figcaption><span><i class="window-dot"></i> <span data-i18n="product.window">MINERVA / ИНСТАНСЫ</span></span><span data-i18n="product.build">ВЕРСИЯ В РАЗРАБОТКЕ</span></figcaption>
             <img src="assets/minerva-app.png" alt="Экран инстансов в приложении Minerva" />
           </figure>
         </div>
         <div class="signal-row reveal" aria-label="Принципы продукта">
-          <div><strong>Изоляция</strong><span>Состояние инстанса</span></div><div><strong>Общее</strong><span>Проверенный кеш</span></div><div><strong>Локально</strong><span>Диагностика</span></div>
+          <div><strong data-i18n="signal.isolated">Изоляция</strong><span data-i18n="signal.instance">Состояние инстанса</span></div><div><strong data-i18n="signal.shared">Общее</strong><span data-i18n="signal.cache">Проверенный кеш</span></div><div><strong data-i18n="signal.local">Локально</strong><span data-i18n="signal.diagnostics">Диагностика</span></div>
         </div>
       </section>
 
       <section class="capabilities snap-section" id="content">
         <div class="section-copy reveal">
-          <div class="section-kicker"><span>02</span><span>СИСТЕМА КОНТЕНТА</span></div>
-          <h2>Добавляйте нужное.<br />Понимайте, почему оно работает.</h2>
-          <p>Minerva подбирает совместимый контент под выбранные версии Minecraft и загрузчика, а каждое изменение остаётся видимым и обратимым.</p>
+          <div class="section-kicker"><span>02</span><span data-i18n="content.kicker">СИСТЕМА КОНТЕНТА</span></div>
+          <h2 data-i18n="content.title">Добавляйте нужное.<br />Понимайте, почему оно работает.</h2>
+          <p data-i18n="content.copy">Minerva подбирает совместимый контент под выбранные версии Minecraft и загрузчика, а каждое изменение остаётся видимым и обратимым.</p>
         </div>
         <div class="capability-grid reveal" style="--delay: 100ms">
           <article class="glass-panel feature feature-large">
-            <span class="feature-number">01 / ПОИСК</span>
-            <div><h3>Modrinth в контексте.</h3><p>Поиск учитывает активный инстанс, совместимость, загрузчик, версию игры и зависимости.</p></div>
-            <div class="mini-search" aria-hidden="true"><span>Найти совместимый контент</span><kbd>Ctrl K</kbd></div>
+            <span class="feature-number" data-i18n="discover.number">01 / ПОИСК</span>
+            <div><h3 data-i18n="discover.title">Modrinth в контексте.</h3><p data-i18n="discover.copy">Поиск учитывает активный инстанс, совместимость, загрузчик, версию игры и зависимости.</p></div>
+            <div class="mini-search" aria-hidden="true"><span data-i18n="discover.search">Найти совместимый контент</span><kbd>Ctrl K</kbd></div>
           </article>
           <article class="glass-panel feature">
-            <span class="feature-number">02 / ИМПОРТ</span>
-            <div><h3>Локальные файлы без компромиссов.</h3><p>Устанавливайте JAR-файлы модов с компьютера прямо в выбранный инстанс.</p></div>
-            <span class="feature-action">ИМПОРТ ИЗ ФАЙЛОВ <i>↗</i></span>
+            <span class="feature-number" data-i18n="import.number">02 / ИМПОРТ</span>
+            <div><h3 data-i18n="import.title">Локальные файлы без компромиссов.</h3><p data-i18n="import.copy">Устанавливайте JAR-файлы модов с компьютера прямо в выбранный инстанс.</p></div>
+            <span class="feature-action"><span data-i18n="import.action">ИМПОРТ ИЗ ФАЙЛОВ</span> <i>↗</i></span>
           </article>
           <article class="glass-panel feature">
-            <span class="feature-number">03 / ЗАВИСИМОСТИ</span>
-            <div><h3>Никаких неожиданных зависимостей.</h3><p>Проверяйте обязательные дополнения и несовместимости до начала установки.</p></div>
-            <div class="dependency-line" aria-hidden="true"><span>МОД</span><i></i><span>API</span><i></i><span>ГОТОВО</span></div>
+            <span class="feature-number" data-i18n="resolve.number">03 / ЗАВИСИМОСТИ</span>
+            <div><h3 data-i18n="resolve.title">Никаких неожиданных зависимостей.</h3><p data-i18n="resolve.copy">Проверяйте обязательные дополнения и несовместимости до начала установки.</p></div>
+            <div class="dependency-line" aria-hidden="true"><span data-i18n="resolve.mod">МОД</span><i></i><span>API</span><i></i><span data-i18n="resolve.ready">ГОТОВО</span></div>
           </article>
         </div>
       </section>
 
       <section class="security snap-section" id="security">
         <div class="section-copy reveal">
-          <div class="section-kicker"><span>03</span><span>МОДЕЛЬ ДОВЕРИЯ</span></div>
-          <h2>Ваш аккаунт — не контент<br />для лаунчера.</h2>
-          <p>Minerva использует официальный путь авторизации Microsoft и сохраняет проверку владения игрой. Пароль Microsoft никогда не вводится в Minerva.</p>
+          <div class="section-kicker"><span>03</span><span data-i18n="security.kicker">МОДЕЛЬ ДОВЕРИЯ</span></div>
+          <h2 data-i18n="security.title">Ваш аккаунт — не контент<br />для лаунчера.</h2>
+          <p data-i18n="security.copy">Minerva использует официальный путь авторизации Microsoft и сохраняет проверку владения игрой. Пароль Microsoft никогда не вводится в Minerva.</p>
         </div>
         <div class="auth-flow reveal" style="--delay: 100ms" aria-label="Процесс авторизации">
-          <div class="flow-node glass-panel"><span>01</span><strong>Microsoft</strong><small>Авторизация устройства</small></div><i class="flow-line"></i>
-          <div class="flow-node glass-panel"><span>02</span><strong>Xbox Live</strong><small>Цепочка идентификации</small></div><i class="flow-line"></i>
-          <div class="flow-node glass-panel"><span>03</span><strong>Minecraft</strong><small>Проверка владения</small></div>
+          <div class="flow-node glass-panel"><span>01</span><strong>Microsoft</strong><small data-i18n="security.device">Авторизация устройства</small></div><i class="flow-line"></i>
+          <div class="flow-node glass-panel"><span>02</span><strong>Xbox Live</strong><small data-i18n="security.identity">Цепочка идентификации</small></div><i class="flow-line"></i>
+          <div class="flow-node glass-panel"><span>03</span><strong>Minecraft</strong><small data-i18n="security.ownership">Проверка владения</small></div>
         </div>
-        <div class="security-notes reveal"><span>НЕ СОБИРАЕМ ПАРОЛИ</span><span>НЕ ОБХОДИМ ЛИЦЕНЗИЮ</span><span>ЛОКАЛЬНОЕ ХРАНЕНИЕ</span></div>
+        <div class="security-notes reveal"><span data-i18n="security.passwords">НЕ СОБИРАЕМ ПАРОЛИ</span><span data-i18n="security.bypass">НЕ ОБХОДИМ ЛИЦЕНЗИЮ</span><span data-i18n="security.storage">ЛОКАЛЬНОЕ ХРАНЕНИЕ</span></div>
       </section>
 
       <section class="final-section snap-section" id="status">
         <div class="final-word" aria-hidden="true">MINERVA</div>
         <div class="final-content reveal">
-          <div class="section-kicker"><span>04</span><span>ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ</span></div>
-          <h2>Разрабатываем тщательно.<br />Выпустим, когда всё будет готово.</h2>
-          <p>Minerva находится в активной приватной разработке. Публичная загрузка появится после одобрения авторизации и завершения проверок безопасности релиза.</p>
-          <div class="status-line"><i></i><span>Активная разработка</span></div>
+          <div class="section-kicker"><span>04</span><span data-i18n="status.kicker">ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ</span></div>
+          <h2 data-i18n="status.title">Разрабатываем тщательно.<br />Выпустим, когда всё будет готово.</h2>
+          <p data-i18n="status.copy">Minerva находится в активной приватной разработке. Публичная загрузка появится после одобрения авторизации и завершения проверок безопасности релиза.</p>
+          <div class="status-line"><i></i><span data-i18n="status.active">Активная разработка</span></div>
         </div>
         <footer>
           <a class="brand footer-brand" href="#concept"><span class="brand-mark" aria-hidden="true">M</span><span>MINERVA</span></a>
-          <nav aria-label="Навигация в подвале"><a href="privacy.html">Конфиденциальность</a><a href="terms.html">Условия</a><a href="https://github.com/GrizzlyDeveloper" rel="noreferrer">Grizzly Dev</a></nav>
-          <p>Проект не связан с Mojang Studios или Microsoft.</p>
+          <nav aria-label="Навигация в подвале"><a href="privacy.html" data-i18n="footer.privacy">Конфиденциальность</a><a href="terms.html" data-i18n="footer.terms">Условия</a><a href="https://github.com/GrizzlyDeveloper" rel="noreferrer">Grizzly Dev</a></nav>
+          <p data-i18n="footer.disclaimer">Проект не связан с Mojang Studios или Microsoft.</p>
         </footer>
       </section>
     </main>

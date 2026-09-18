@@ -48,8 +48,26 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .header-nav { display: flex; align-items: center; gap: 4px; }
 .header-nav a { padding: 8px 12px; border: 1px solid transparent; border-radius: 4px; color: rgba(255,255,255,.42); font-size: 12px; text-decoration: none; transition: 180ms ease; }
 .header-nav a:hover { border-color: rgba(255,255,255,.08); background: rgba(255,255,255,.04); color: #fff; }
+.header-tools { display: flex; align-items: center; justify-self: end; gap: 8px; }
 .header-cta { justify-self: end; }
 .nav-toggle { display: none; }
+
+.language-switch {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 30px);
+  align-items: center;
+  height: 30px;
+  padding: 2px;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 999px;
+  background: rgba(255,255,255,.025);
+  box-shadow: inset 1px 1px 0 rgba(255,255,255,.035);
+}
+.language-thumb { position: absolute; left: 2px; width: 30px; height: 24px; border: 1px solid rgba(255,255,255,.13); border-radius: 999px; background: rgba(255,255,255,.1); box-shadow: 0 2px 8px rgba(0,0,0,.35), inset 1px 1px 0 rgba(255,255,255,.08); transition: transform 260ms var(--ease); }
+.language-switch.is-english .language-thumb { transform: translateX(30px); }
+.language-switch button { position: relative; z-index: 1; width: 30px; height: 24px; padding: 0; border: 0; background: transparent; color: rgba(255,255,255,.28); font: 600 9px/1 ui-monospace, monospace; cursor: pointer; transition: color 180ms ease; }
+.language-switch button.is-active { color: rgba(255,255,255,.92); }
 
 .pill { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 34px; padding: 0 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: transparent; color: rgba(255,255,255,.78); font: 500 12px/1 inherit; text-decoration: none; transition: 180ms ease; }
 .pill:hover { border-color: rgba(255,255,255,.36); background: rgba(255,255,255,.05); color: #fff; }
@@ -146,9 +164,10 @@ footer p { grid-column: 1 / -1; margin: -22px 0 0; color: rgba(255,255,255,.2); 
   body { overflow: auto; }
   .landing-scroll { height: auto; overflow: visible; scroll-snap-type: none; }
   .snap-section { min-height: 100svh; scroll-snap-align: none; }
-  .site-header { grid-template-columns: 1fr auto; }
+  .site-header { grid-template-columns: 1fr auto auto; }
   .header-cta { display: none; }
-  .nav-toggle { display: grid; gap: 5px; justify-self: end; width: 32px; height: 32px; place-content: center; border: 1px solid rgba(255,255,255,.075); border-radius: 4px; background: rgba(255,255,255,.035); }
+  .header-tools { grid-column: 2; grid-row: 1; }
+  .nav-toggle { display: grid; grid-column: 3; grid-row: 1; gap: 5px; justify-self: end; width: 32px; height: 32px; place-content: center; border: 1px solid rgba(255,255,255,.075); border-radius: 4px; background: rgba(255,255,255,.035); }
   .nav-toggle span { display: block; width: 14px; height: 1px; background: rgba(255,255,255,.72); transition: 180ms ease; }
   .nav-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }

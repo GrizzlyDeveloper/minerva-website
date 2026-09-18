@@ -8,23 +8,26 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Конфиденциальность | Minerva</title>
   </head>
-  <body class="legal-body">
+  <body class="legal-body" data-page="privacy">
     <header class="site-header legal-header">
       <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">M</span><span>MINERVA</span></a>
-      <nav class="header-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="terms.html">Условия</a></nav>
+      <button class="nav-toggle" type="button" aria-label="Открыть навигацию" aria-expanded="false" title="Меню"><span></span><span></span></button>
+      <nav class="header-nav" aria-label="Основная навигация"><a href="index.html" data-i18n="nav.home">Главная</a><a href="terms.html" data-i18n="footer.terms">Условия</a></nav>
+      <div class="header-tools"><div class="language-switch" role="group" aria-label="Выбор языка"><span class="language-thumb" aria-hidden="true"></span><button type="button" data-language="ru" class="is-active">RU</button><button type="button" data-language="en">EN</button></div></div>
     </header>
     <main class="legal-page">
-      <div class="section-kicker"><span>ПРАВОВАЯ ИНФОРМАЦИЯ</span><span>Действует с 18 сентября 2026 года</span></div>
-      <h1>Политика конфиденциальности</h1>
-      <p class="lead">Minerva — локальное настольное приложение от Grizzly Dev. Эта политика описывает работу предварительных и будущих релизных версий с данными аккаунта и приложения.</p>
+      <div class="section-kicker"><span data-i18n="legal.label">ПРАВОВАЯ ИНФОРМАЦИЯ</span><span data-i18n="legal.date">Действует с 18 сентября 2026 года</span></div>
+      <h1 data-i18n="privacy.title">Политика конфиденциальности</h1>
+      <p class="lead" data-i18n="privacy.lead">Minerva — локальное настольное приложение от Grizzly Dev. Эта политика описывает работу предварительных и будущих релизных версий с данными аккаунта и приложения.</p>
 
-      <section><h2>Какие данные обрабатывает Minerva</h2><p>При входе через Microsoft Minerva обрабатывает токены Microsoft, Xbox Live, XSTS и Minecraft Services, имя профиля Minecraft и UUID. Конфигурация инстансов, метаданные установленного контента, диагностика лаунчера и игровые логи также обрабатываются локально.</p></section>
-      <section><h2>Назначение</h2><p>Данные используются только для авторизации, проверки доступа к Minecraft: Java Edition, запуска игры, управления локальными инстансами, установки контента и запрошенной пользователем диагностики.</p></section>
-      <section><h2>Хранение и передача</h2><p>Minerva не использует собственный сервер аккаунтов. Состояние приложения и данные авторизации остаются на устройстве пользователя. Запросы авторизации отправляются напрямую официальным сервисам Microsoft, Xbox Live и Minecraft Services. Метаданные и файлы модов могут запрашиваться у Modrinth.</p></section>
-      <section><h2>Телеметрия</h2><p>Minerva не собирает аналитику, рекламные идентификаторы, игровую активность или фоновую телеметрию. Локальные диагностические логи не загружаются автоматически.</p></section>
-      <section><h2>Пароли и владение игрой</h2><p>Пароль аккаунта вводится только на страницах Microsoft и недоступен Minerva. Лаунчер не обходит проверку владения Minecraft и не поддерживает нелицензионную авторизацию.</p></section>
-      <section><h2>Статус разработки</h2><p>Minerva находится в стадии предварительной разработки и пока не распространяется как публичный релиз. До выпуска мы усиливаем безопасность хранения данных авторизации.</p></section>
-      <section><h2>Связь</h2><p>Вопросы можно направить <a href="https://github.com/GrizzlyDeveloper">Grizzly Dev на GitHub</a>.</p></section>
+      <section><h2 data-i18n="privacy.dataTitle">Какие данные обрабатывает Minerva</h2><p data-i18n="privacy.dataCopy">При входе через Microsoft Minerva обрабатывает токены Microsoft, Xbox Live, XSTS и Minecraft Services, имя профиля Minecraft и UUID. Конфигурация инстансов, метаданные установленного контента, диагностика лаунчера и игровые логи также обрабатываются локально.</p></section>
+      <section><h2 data-i18n="privacy.purposeTitle">Назначение</h2><p data-i18n="privacy.purposeCopy">Данные используются только для авторизации, проверки доступа к Minecraft: Java Edition, запуска игры, управления локальными инстансами, установки контента и запрошенной пользователем диагностики.</p></section>
+      <section><h2 data-i18n="privacy.storageTitle">Хранение и передача</h2><p data-i18n="privacy.storageCopy">Minerva не использует собственный сервер аккаунтов. Состояние приложения и данные авторизации остаются на устройстве пользователя. Запросы авторизации отправляются напрямую официальным сервисам Microsoft, Xbox Live и Minecraft Services. Метаданные и файлы модов могут запрашиваться у Modrinth.</p></section>
+      <section><h2 data-i18n="privacy.telemetryTitle">Телеметрия</h2><p data-i18n="privacy.telemetryCopy">Minerva не собирает аналитику, рекламные идентификаторы, игровую активность или фоновую телеметрию. Локальные диагностические логи не загружаются автоматически.</p></section>
+      <section><h2 data-i18n="privacy.passwordTitle">Пароли и владение игрой</h2><p data-i18n="privacy.passwordCopy">Пароль аккаунта вводится только на страницах Microsoft и недоступен Minerva. Лаунчер не обходит проверку владения Minecraft и не поддерживает нелицензионную авторизацию.</p></section>
+      <section><h2 data-i18n="privacy.devTitle">Статус разработки</h2><p data-i18n="privacy.devCopy">Minerva находится в стадии предварительной разработки и пока не распространяется как публичный релиз. До выпуска мы усиливаем безопасность хранения данных авторизации.</p></section>
+      <section><h2 data-i18n="legal.contact">Связь</h2><p><span data-i18n="legal.contactCopy">Вопросы можно направить</span> <a href="https://github.com/GrizzlyDeveloper" data-i18n="legal.contactLink">Grizzly Dev на GitHub</a>.</p></section>
+    <script src="script.js"></script>
     </main>
   </body>
 </html>
