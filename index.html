@@ -3,115 +3,572 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Minerva — быстрый и сфокусированный лаунчер Minecraft: Java Edition для Windows." />
+    <meta
+      name="description"
+      content="Minerva — лаунчер Minecraft Java для Windows. Инстанции, профили, Modrinth, диагностика и ZIP-экспорт. Публичная бета 0.4.13."
+    />
     <meta name="theme-color" content="#030303" />
     <meta property="og:title" content="Minerva" />
-    <meta property="og:description" content="Инстансы Minecraft, контент Fabric и диагностика в одном сфокусированном лаунчере." />
-    <meta property="og:image" content="https://grizzlydeveloper.github.io/Minerva-Website/assets/minerva-app.png" />
+    <meta
+      property="og:description"
+      content="Инстансы Minecraft, контент Fabric и диагностика в одном сфокусированном лаунчере."
+    />
+    <meta
+      property="og:image"
+      content="https://grizzlydeveloper.github.io/Minerva-Website/assets/minerva-app.png"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://grizzlydeveloper.github.io/Minerva-Website/" />
-    <link rel="canonical" href="https://grizzlydeveloper.github.io/Minerva-Website/" />
+    <meta
+      property="og:url"
+      content="https://grizzlydeveloper.github.io/Minerva-Website/"
+    />
+    <link
+      rel="canonical"
+      href="https://grizzlydeveloper.github.io/Minerva-Website/"
+    />
     <link rel="icon" href="assets/favicon.png" />
-    <link rel="stylesheet" href="styles.css?v=6" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=7" />
+    <script src="script.js?v=7" defer></script>
     <title>Minerva | Лаунчер Minecraft Java</title>
   </head>
   <body data-page="home">
+    <a class="skip-link" href="#content"
+      ><span data-i18n="nav.skip">К возможностям</span></a
+    >
     <header class="site-header">
-      <a class="brand" href="#concept" aria-label="Главная Minerva"><span class="brand-mark" aria-hidden="true">M</span><span>MINERVA</span></a>
-      <button class="nav-toggle" type="button" aria-label="Открыть навигацию" aria-expanded="false" title="Меню"><span></span><span></span></button>
+      <a class="brand" href="#concept" aria-label="Главная Minerva"
+        ><span class="brand-mark" aria-hidden="true">M</span
+        ><span>MINERVA</span></a
+      >
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Открыть навигацию"
+        aria-expanded="false"
+        title="Меню"
+      >
+        <span></span><span></span>
+      </button>
       <nav class="header-nav" aria-label="Основная навигация">
-        <a href="#product" data-i18n="nav.product">Продукт</a><a href="#content" data-i18n="nav.content">Контент</a><a href="#security" data-i18n="nav.security">Безопасность</a>
+        <a href="#product" data-i18n="nav.product">Лаунчер</a
+        ><a href="#content" data-i18n="nav.content">Возможности</a
+        ><a data-i18n="nav.compare" href="#comparison">Сравнение</a
+        ><a href="#security" data-i18n="nav.security">Аккаунты</a>
       </nav>
       <div class="header-tools">
-        <div class="language-switch" role="group" aria-label="Выбор языка"><span class="language-thumb" aria-hidden="true"></span><button type="button" data-language="ru" class="is-active">RU</button><button type="button" data-language="en">EN</button></div>
-        <a class="pill header-cta" href="#status"><span data-i18n="nav.status">Статус разработки</span> <span aria-hidden="true">↗</span></a>
+        <div class="language-switch" role="group" aria-label="Выбор языка">
+          <span class="language-thumb" aria-hidden="true"></span
+          ><button type="button" data-language="ru" class="is-active">RU</button
+          ><button type="button" data-language="en">EN</button>
+        </div>
+        <a class="pill header-cta" href="#status"
+          ><span data-i18n="nav.status">Скачать · 0.4.13</span>
+          <span aria-hidden="true">↓</span></a
+        >
       </div>
     </header>
 
     <main class="landing-scroll" data-scroll-container>
-      <section class="hero snap-section" id="concept" aria-labelledby="hero-title">
-        <img class="hero-media" src="assets/minerva-app.png" alt="Интерфейс управления инстансами Minerva" />
-        <div class="hero-veil" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
+      <section
+        class="hero snap-section"
+        id="concept"
+        aria-labelledby="hero-title"
+      >
+        <img
+          class="hero-media"
+          src="assets/minerva-app.png"
+          alt="Интерфейс управления инстансами Minerva"
+        />
+        <div class="hero-veil" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-content reveal">
-          <p class="caption" data-i18n="hero.caption">Лаунчер Minecraft Java / Windows</p>
+          <p class="caption" data-i18n="hero.caption">
+            Minecraft Java / Windows / Beta 0.4.13
+          </p>
           <h1 id="hero-title">Minerva.</h1>
-          <p class="hero-statement" data-i18n="hero.statement">Между вами и игрой остаётся только то, что действительно важно.</p>
-          <p class="hero-copy" data-i18n="hero.copy">Изолированные инстансы, контент Fabric, общие ресурсы и прозрачная диагностика в одном сфокусированном лаунчере.</p>
-          <div class="hero-actions"><a class="pill pill-strong" href="#product"><span data-i18n="hero.explore">Посмотреть продукт</span> <span aria-hidden="true">↓</span></a><a class="pill" href="#status" data-i18n="hero.status">Статус</a></div>
+          <p class="hero-statement" data-i18n="hero.statement">
+            Ваши сборки.<br />Ваши правила запуска.
+          </p>
+          <p class="hero-copy" data-i18n="hero.copy">
+            Отдельные миры и профили, моды под контролем и понятная диагностика.
+            Minerva собирает всё нужное для игры в одном месте.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="pill pill-strong download-link"
+              href="https://github.com/GrizzlyDeveloper/Minerva-Releases/releases/tag/v0.4.13"
+              ><span data-i18n="download.button">Скачать для Windows</span>
+              <span aria-hidden="true">↗</span></a
+            ><a class="pill" href="#content"
+              ><span data-i18n="hero.explore">Возможности</span>
+              <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <p data-i18n="download.warning" class="download-warning">
+            Это бета-версия. Windows может показать предупреждение при
+            установке: у Minerva пока нет цифровой подписи для Windows.
+            Скачивайте установщик только с официальной страницы релиза
+          </p>
         </div>
-        <div class="hero-footer"><span data-i18n="hero.by">Разработка Grizzly Dev</span><span class="scroll-cue"><i></i> <span data-i18n="hero.scroll">Листайте дальше</span></span></div>
+        <div class="hero-footer">
+          <span data-i18n="hero.by">Разработка Grizzly Dev</span
+          ><span class="scroll-cue"
+            ><i></i> <span data-i18n="hero.scroll">Листайте дальше</span></span
+          >
+        </div>
       </section>
 
       <section class="showcase snap-section" id="product">
         <div class="section-copy reveal">
-          <div class="section-kicker"><span>01</span><span data-i18n="product.kicker">ЛАУНЧЕР</span></div>
-          <h2 data-i18n="product.title">Разные миры.<br />Одна цельная система.</h2>
-          <p data-i18n="product.copy">Каждая сборка хранит свои моды, сохранения, логи, память и состояние запуска. Minerva управляет сложностью, не вставая между вами и игрой.</p>
+          <div class="section-kicker">
+            <span>01</span><span data-i18n="product.kicker">ЛАУНЧЕР</span>
+          </div>
+          <h2 data-i18n="product.title">
+            Разные миры.<br />Одна цельная система.
+          </h2>
+          <p data-i18n="product.copy">
+            Vanilla и Fabric в отдельных инстанциях: у каждой свои миры, моды и
+            настройки, включая версию Fabric Loader. Назначьте профиль запуска
+            по умолчанию каждой сборке и запускайте разные инстанции
+            одновременно под разными профилями.
+          </p>
         </div>
         <div class="product-stage reveal" style="--delay: 120ms">
           <div class="stage-aura" aria-hidden="true"></div>
           <figure class="app-window glass-panel">
-            <figcaption><span><i class="window-dot"></i> <span data-i18n="product.window">MINERVA / ИНСТАНСЫ</span></span><span data-i18n="product.build">ВЕРСИЯ В РАЗРАБОТКЕ</span></figcaption>
-            <img src="assets/minerva-app.png" alt="Экран инстансов в приложении Minerva" />
+            <figcaption>
+              <span
+                ><i class="window-dot"></i>
+                <span data-i18n="product.window">MINERVA / ИНСТАНСЫ</span></span
+              ><span data-i18n="product.build">ОБЗОР ИНТЕРФЕЙСА</span>
+            </figcaption>
+            <img
+              src="assets/minerva-app.png"
+              alt="Экран инстансов в приложении Minerva"
+            />
           </figure>
         </div>
         <div class="signal-row reveal" aria-label="Принципы продукта">
-          <div><strong data-i18n="signal.isolated">Изоляция</strong><span data-i18n="signal.instance">Состояние инстанса</span></div><div><strong data-i18n="signal.shared">Общее</strong><span data-i18n="signal.cache">Проверенный кеш</span></div><div><strong data-i18n="signal.local">Локально</strong><span data-i18n="signal.diagnostics">Диагностика</span></div>
+          <div>
+            <strong data-i18n="signal.isolated">Своя сборка</strong
+            ><span data-i18n="signal.instance">Vanilla или Fabric</span>
+          </div>
+          <div>
+            <strong data-i18n="signal.shared">Свой профиль</strong
+            ><span data-i18n="signal.cache">Для каждой инстанции</span>
+          </div>
+          <div>
+            <strong data-i18n="signal.local">Вместе</strong
+            ><span data-i18n="signal.diagnostics">Параллельные запуски</span>
+          </div>
         </div>
       </section>
 
-      <section class="capabilities snap-section" id="content">
+      <section
+        class="capabilities snap-section"
+        id="content"
+        aria-labelledby="features-title"
+      >
         <div class="section-copy reveal">
-          <div class="section-kicker"><span>02</span><span data-i18n="content.kicker">СИСТЕМА КОНТЕНТА</span></div>
-          <h2 data-i18n="content.title">Добавляйте нужное.<br />Понимайте, почему оно работает.</h2>
-          <p data-i18n="content.copy">Minerva подбирает совместимый контент под выбранные версии Minecraft и загрузчика, а каждое изменение остаётся видимым и обратимым.</p>
+          <div class="section-kicker">
+            <span>02</span><span data-i18n="features.kicker">ВОЗМОЖНОСТИ</span>
+          </div>
+          <h2 data-i18n="features.title" id="features-title">
+            Всё для вашей сборки.<br />До и после запуска.
+          </h2>
+          <p data-i18n="features.copy">
+            Реализованные возможности публичной бета-версии Minerva. От первой
+            установки до разбора вылета.
+          </p>
         </div>
-        <div class="capability-grid reveal" style="--delay: 100ms">
-          <article class="glass-panel feature feature-large">
-            <span class="feature-number" data-i18n="discover.number">01 / ПОИСК</span>
-            <div><h3 data-i18n="discover.title">Modrinth в контексте.</h3><p data-i18n="discover.copy">Поиск учитывает активный инстанс, совместимость, загрузчик, версию игры и зависимости.</p></div>
-            <div class="mini-search" aria-hidden="true"><span data-i18n="discover.search">Найти совместимый контент</span><kbd>Ctrl K</kbd></div>
+        <div class="capability-grid">
+          <article class="glass-panel feature reveal">
+            <span data-i18n="content.number" class="feature-number"
+              >01 / КОНТЕНТ</span
+            >
+            <div>
+              <h3 data-i18n="content.title">Соберите свой Minecraft.</h3>
+              <p data-i18n="content.copy">
+                Находите и устанавливайте моды, ресурспаки и шейдеры из
+                Modrinth. Импортируйте .mrpack как новую инстанцию или
+                добавляйте локальные файлы.
+              </p>
+            </div>
+            <span data-i18n="content.foot" class="feature-action"
+              >Modrinth · .mrpack · локальные файлы</span
+            >
           </article>
-          <article class="glass-panel feature">
-            <span class="feature-number" data-i18n="import.number">02 / ИМПОРТ</span>
-            <div><h3 data-i18n="import.title">Локальные файлы без компромиссов.</h3><p data-i18n="import.copy">Устанавливайте JAR-файлы модов с компьютера прямо в выбранный инстанс.</p></div>
-            <span class="feature-action"><span data-i18n="import.action">ИМПОРТ ИЗ ФАЙЛОВ</span> <i>↗</i></span>
+          <article class="glass-panel feature reveal">
+            <span data-i18n="versions.number" class="feature-number"
+              >02 / ВЕРСИИ</span
+            >
+            <div>
+              <h3 data-i18n="versions.title">
+                Обновляйте с возможностью отката.
+              </h3>
+              <p data-i18n="versions.copy">
+                Выбирайте конкретную совместимую версию мода. Minerva проверяет
+                зависимости перед запуском, обновляет контент и сохраняет копию
+                для отката, если обновление не подошло.
+              </p>
+            </div>
+            <span data-i18n="versions.foot" class="feature-action"
+              >Выбор версии · обновление · откат</span
+            >
           </article>
-          <article class="glass-panel feature">
-            <span class="feature-number" data-i18n="resolve.number">03 / ЗАВИСИМОСТИ</span>
-            <div><h3 data-i18n="resolve.title">Никаких неожиданных зависимостей.</h3><p data-i18n="resolve.copy">Проверяйте обязательные дополнения и несовместимости до начала установки.</p></div>
-            <div class="dependency-line" aria-hidden="true"><span data-i18n="resolve.mod">МОД</span><i></i><span>API</span><i></i><span data-i18n="resolve.ready">ГОТОВО</span></div>
+          <article class="glass-panel feature reveal">
+            <span data-i18n="launch.number" class="feature-number"
+              >03 / ЗАПУСК</span
+            >
+            <div>
+              <h3 data-i18n="launch.title">Готовые файлы — сразу в дело.</h3>
+              <p data-i18n="launch.copy">
+                По вашему выбору — запуск из уже подготовленных локальных файлов
+                без повторной сетевой проверки файлов игры. Для лицензионного
+                профиля по-прежнему нужна действующая Microsoft-авторизация.
+                Подходящая Java 21 для современных версий Minecraft
+                устанавливается автоматически, если её нет.
+              </p>
+            </div>
+            <span data-i18n="launch.foot" class="feature-action"
+              >Локальный запуск · Java 21</span
+            >
           </article>
+          <article class="glass-panel feature reveal">
+            <span data-i18n="diagnostics.number" class="feature-number"
+              >04 / ДИАГНОСТИКА</span
+            >
+            <div>
+              <h3 data-i18n="diagnostics.title">Больше контекста о вылете.</h3>
+              <p data-i18n="diagnostics.copy">
+                Диагностика показывает свидетельства из логов и историю вылетов.
+                После успешного запуска старый краш остаётся в истории, а не в
+                текущих проблемах. Живые логи доступны отдельно для каждой
+                инстанции, в том числе при параллельной игре.
+              </p>
+            </div>
+            <span data-i18n="diagnostics.foot" class="feature-action"
+              >Свидетельства · история · живые логи</span
+            >
+          </article>
+          <article class="glass-panel feature reveal">
+            <span data-i18n="files.number" class="feature-number"
+              >05 / ФАЙЛЫ</span
+            >
+            <div>
+              <h3 data-i18n="files.title">Восстановите. Возьмите с собой.</h3>
+              <p data-i18n="files.copy">
+                Repair проверяет и восстанавливает управляемые файлы без
+                намеренного удаления миров, конфигов и пользовательского
+                контента. При ZIP-экспорте вы выбираете содержимое и можете
+                включить дополнительные папки — например, метки Xaero.
+              </p>
+            </div>
+            <span data-i18n="files.foot" class="feature-action"
+              >Repair · ZIP с выбором папок</span
+            >
+          </article>
+          <article class="glass-panel feature reveal">
+            <span data-i18n="everyday.number" class="feature-number"
+              >06 / КАЖДЫЙ ДЕНЬ</span
+            >
+            <div>
+              <h3 data-i18n="everyday.title">На вашем языке. Под рукой.</h3>
+              <p data-i18n="everyday.copy">
+                Русский и английский интерфейс: выберите язык при установке или
+                смените его в настройках. Пока игра запущена, Minerva работает
+                через системный трей. Обновления лаунчера доступны через GitHub
+                Releases.
+              </p>
+            </div>
+            <span data-i18n="everyday.foot" class="feature-action"
+              >RU / EN · трей · обновления</span
+            >
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="comparison snap-section"
+        id="comparison"
+        aria-labelledby="comparison-title"
+      >
+        <div class="section-copy reveal">
+          <div class="section-kicker">
+            <span>03</span
+            ><span data-i18n="compare.kicker">СРАВНЕНИЕ СЦЕНАРИЕВ</span>
+          </div>
+          <h2 data-i18n="compare.title" id="comparison-title">
+            Меньше ручных шагов.<br />Больше контроля.
+          </h2>
+          <p data-i18n="compare.copy">
+            Сравниваем базовый сценарий работы с лаунчером и то, как его можно
+            организовать в Minerva. Это не оценка конкретных конкурентов.
+          </p>
+        </div>
+        <div class="comparison-shell">
+          <table>
+            <caption class="sr-only" data-i18n="compare.caption">
+              Семь сценариев работы с лаунчером
+            </caption>
+            <thead>
+              <tr>
+                <th data-i18n="compare.task" scope="col">Задача</th>
+                <th data-i18n="compare.base" scope="col">Базовый сценарий</th>
+                <th scope="col" class="minerva-column">
+                  MINERVA <span class="table-beta">BETA 0.4.13</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th data-i18n="compare.profile.title" scope="row">
+                  Профиль для сборки
+                </th>
+                <td>
+                  <span
+                    class="mobile-label"
+                    aria-hidden="true"
+                    data-i18n="compare.base"
+                    >Базовый сценарий</span
+                  ><span data-i18n="compare.profile.base"
+                    >Выбирать профиль перед игрой.</span
+                  >
+                </td>
+                <td class="minerva-column">
+                  <span class="mobile-label" aria-hidden="true">MINERVA</span
+                  ><span data-i18n="compare.profile.benefit"
+                    >Назначить профиль по умолчанию каждой инстанции.</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th data-i18n="compare.parallel.title" scope="row">
+                  Параллельная игра
+                </th>
+                <td>
+                  <span
+                    class="mobile-label"
+                    aria-hidden="true"
+                    data-i18n="compare.base"
+                    >Базовый сценарий</span
+                  ><span data-i18n="compare.parallel.base"
+                    >Запустить одну игровую сессию.</span
+                  >
+                </td>
+                <td class="minerva-column">
+                  <span class="mobile-label" aria-hidden="true">MINERVA</span
+                  ><span data-i18n="compare.parallel.benefit"
+                    >Запускать разные инстанции одновременно под разными
+                    профилями.</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th data-i18n="compare.local.title" scope="row">
+                  Локальный запуск
+                </th>
+                <td>
+                  <span
+                    class="mobile-label"
+                    aria-hidden="true"
+                    data-i18n="compare.base"
+                    >Базовый сценарий</span
+                  ><span data-i18n="compare.local.base"
+                    >Подготовить файлы и запустить игру.</span
+                  >
+                </td>
+                <td class="minerva-column">
+                  <span class="mobile-label" aria-hidden="true">MINERVA</span
+                  ><span data-i18n="compare.local.benefit"
+                    >Выбрать запуск из готовых файлов без повторной сетевой
+                    проверки. Для лицензионного профиля нужна действующая
+                    Microsoft-авторизация.</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th data-i18n="compare.mods.title" scope="row">Версии модов</th>
+                <td>
+                  <span
+                    class="mobile-label"
+                    aria-hidden="true"
+                    data-i18n="compare.base"
+                    >Базовый сценарий</span
+                  ><span data-i18n="compare.mods.base"
+                    >Установить мод в сборку.</span
+                  >
+                </td>
+                <td class="minerva-column">
+                  <span class="mobile-label" aria-hidden="true">MINERVA</span
+                  ><span data-i18n="compare.mods.benefit"
+                    >Выбирать совместимую версию, обновлять и возвращать
+                    сохранённую версию при неудачном обновлении.</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th data-i18n="compare.crash.title" scope="row">Диагностика</th>
+                <td>
+                  <span
+                    class="mobile-label"
+                    aria-hidden="true"
+                    data-i18n="compare.base"
+                    >Базовый сценарий</span
+                  ><span data-i18n="compare.crash.base"
+                    >Открыть лог после вылета.</span
+                  >
+                </td>
+                <td class="minerva-column">
+                  <span class="mobile-label" aria-hidden="true">MINERVA</span
+                  ><span data-i18n="compare.crash.benefit"
+                    >Видеть свидетельства и историю; успешный запуск снимает
+                    старую проблему с текущей диагностики.</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th data-i18n="compare.zip.title" scope="row">
+                  Содержимое ZIP
+                </th>
+                <td>
+                  <span
+                    class="mobile-label"
+                    aria-hidden="true"
+                    data-i18n="compare.base"
+                    >Базовый сценарий</span
+                  ><span data-i18n="compare.zip.base"
+                    >Перенести файлы сборки в архив.</span
+                  >
+                </td>
+                <td class="minerva-column">
+                  <span class="mobile-label" aria-hidden="true">MINERVA</span
+                  ><span data-i18n="compare.zip.benefit"
+                    >Выбирать папки для экспорта, включая дополнительные данные
+                    и метки Xaero.</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th data-i18n="compare.language.title" scope="row">
+                  Русский интерфейс
+                </th>
+                <td>
+                  <span
+                    class="mobile-label"
+                    aria-hidden="true"
+                    data-i18n="compare.base"
+                    >Базовый сценарий</span
+                  ><span data-i18n="compare.language.base"
+                    >Выбрать язык для работы.</span
+                  >
+                </td>
+                <td class="minerva-column">
+                  <span class="mobile-label" aria-hidden="true">MINERVA</span
+                  ><span data-i18n="compare.language.benefit"
+                    >Выбрать RU / EN в установщике и переключать язык в
+                    настройках.</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
       <section class="security snap-section" id="security">
         <div class="section-copy reveal">
-          <div class="section-kicker"><span>03</span><span data-i18n="security.kicker">МОДЕЛЬ ДОВЕРИЯ</span></div>
-          <h2 data-i18n="security.title">Ваш аккаунт — не контент<br />для лаунчера.</h2>
-          <p data-i18n="security.copy">Minerva использует официальный путь авторизации Microsoft и сохраняет проверку владения игрой. Пароль Microsoft никогда не вводится в Minerva.</p>
+          <div class="section-kicker">
+            <span>04</span
+            ><span data-i18n="security.kicker">АККАУНТЫ И ПРОФИЛИ</span>
+          </div>
+          <h2 data-i18n="security.title">
+            Свой профиль.<br />Понятные границы.
+          </h2>
+          <p data-i18n="security.copy">
+            Вход через Microsoft с автоматическим обновлением сессии и отдельные
+            локальные/offline-профили. Локальный профиль не предоставляет доступ
+            к серверам, требующим лицензию. Запуск из локальных файлов не
+            отменяет Microsoft-авторизацию для лицензионного профиля.
+          </p>
         </div>
-        <div class="auth-flow reveal" style="--delay: 100ms" aria-label="Процесс авторизации">
-          <div class="flow-node glass-panel"><span>01</span><strong>Microsoft</strong><small data-i18n="security.device">Авторизация устройства</small></div><i class="flow-line"></i>
-          <div class="flow-node glass-panel"><span>02</span><strong>Xbox Live</strong><small data-i18n="security.identity">Цепочка идентификации</small></div><i class="flow-line"></i>
-          <div class="flow-node glass-panel"><span>03</span><strong>Minecraft</strong><small data-i18n="security.ownership">Проверка владения</small></div>
+        <div
+          class="auth-flow reveal"
+          style="--delay: 100ms"
+          aria-label="Процесс авторизации"
+        >
+          <div class="flow-node glass-panel">
+            <span>01</span><strong>Microsoft</strong
+            ><small data-i18n="security.device">Авторизация устройства</small>
+          </div>
+          <i class="flow-line"></i>
+          <div class="flow-node glass-panel">
+            <span>02</span><strong>Xbox Live</strong
+            ><small data-i18n="security.identity">Цепочка идентификации</small>
+          </div>
+          <i class="flow-line"></i>
+          <div class="flow-node glass-panel">
+            <span>03</span><strong>Minecraft</strong
+            ><small data-i18n="security.ownership">Проверка владения</small>
+          </div>
         </div>
-        <div class="security-notes reveal"><span data-i18n="security.passwords">НЕ СОБИРАЕМ ПАРОЛИ</span><span data-i18n="security.bypass">НЕ ОБХОДИМ ЛИЦЕНЗИЮ</span><span data-i18n="security.storage">ЛОКАЛЬНОЕ ХРАНЕНИЕ</span></div>
+        <div class="security-notes reveal">
+          <span data-i18n="security.passwords">НЕ СОБИРАЕМ ПАРОЛИ</span
+          ><span data-i18n="security.bypass">НЕ ОБХОДИМ ЛИЦЕНЗИЮ</span
+          ><span data-i18n="security.storage">ЛОКАЛЬНОЕ ХРАНЕНИЕ</span>
+        </div>
       </section>
 
       <section class="final-section snap-section" id="status">
         <div class="final-word" aria-hidden="true">MINERVA</div>
         <div class="final-content reveal">
-          <div class="section-kicker"><span>04</span><span data-i18n="status.kicker">ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ</span></div>
-          <h2 data-i18n="status.title">Разрабатываем тщательно.<br />Выпустим, когда всё будет готово.</h2>
-          <p data-i18n="status.copy">Minerva находится в активной приватной разработке. Публичная загрузка появится после одобрения авторизации и завершения проверок безопасности релиза.</p>
-          <div class="status-line"><i></i><span data-i18n="status.active">Активная разработка</span></div>
+          <div class="section-kicker">
+            <span>05</span
+            ><span data-i18n="status.kicker">ПУБЛИЧНАЯ БЕТА / 0.4.13</span>
+          </div>
+          <h2 data-i18n="status.title">
+            Ваша следующая сборка<br />начинается здесь.
+          </h2>
+          <p data-i18n="status.copy">
+            Minerva 0.4.13 уже доступна для Windows. Скачайте установщик с
+            официальной страницы GitHub Releases.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="pill pill-strong download-link"
+              href="https://github.com/GrizzlyDeveloper/Minerva-Releases/releases/tag/v0.4.13"
+              ><span data-i18n="download.button">Скачать для Windows</span>
+              <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <p data-i18n="download.warning" class="download-warning">
+            Это бета-версия. Windows может показать предупреждение при
+            установке: у Minerva пока нет цифровой подписи для Windows.
+            Скачивайте установщик только с официальной страницы релиза
+          </p>
+          <div class="status-line">
+            <i></i
+            ><span data-i18n="status.active"
+              >Публичная бета · разработка продолжается</span
+            >
+          </div>
         </div>
         <footer>
-          <a class="brand footer-brand" href="#concept"><span class="brand-mark" aria-hidden="true">M</span><span>MINERVA</span></a>
-          <nav aria-label="Навигация в подвале"><a href="privacy.html" data-i18n="footer.privacy">Конфиденциальность</a><a href="terms.html" data-i18n="footer.terms">Условия</a><a href="https://github.com/GrizzlyDeveloper" rel="noreferrer">Grizzly Dev</a></nav>
-          <p data-i18n="footer.disclaimer">Проект не связан с Mojang Studios или Microsoft.</p>
+          <a class="brand footer-brand" href="#concept"
+            ><span class="brand-mark" aria-hidden="true">M</span
+            ><span>MINERVA</span></a
+          >
+          <nav aria-label="Навигация в подвале">
+            <a href="privacy.html" data-i18n="footer.privacy"
+              >Конфиденциальность</a
+            ><a href="terms.html" data-i18n="footer.terms">Условия</a
+            ><a href="https://github.com/GrizzlyDeveloper" rel="noreferrer"
+              >Grizzly Dev</a
+            >
+          </nav>
+          <p data-i18n="footer.disclaimer">
+            Проект не связан с Mojang Studios или Microsoft.
+          </p>
         </footer>
       </section>
     </main>
