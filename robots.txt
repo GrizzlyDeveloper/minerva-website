@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grizzlydeveloper.github.io/Minerva-Website/sitemap.xml
+Sitemap: https://grizzlydeveloper.github.io/minerva-website/sitemap.xml

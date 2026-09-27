@@ -56,28 +56,29 @@ const english = {
   "launch.number": "03 / LAUNCH",
   "versions.foot": "Version picker · update · rollback",
   "versions.copy":
-    "Choose a specific compatible mod version. Minerva checks dependencies before launch, updates content and keeps a rollback copy if an update does not work for you.",
+    "Install a suitable version in one click or choose it manually. Check dependencies before launch, update content and restore the saved version if an update does not work for you.",
   "versions.title": "Update with a way back.",
   "versions.number": "02 / VERSIONS",
-  "content.foot": "Modrinth · .mrpack · local files",
+  "content.foot": "Modrinth · CurseForge · .mrpack",
   "content.number": "01 / CONTENT",
   "features.copy":
-    "Implemented features in the public Minerva beta. From the first install to understanding a crash.",
+    "From installing your first mod to repairing an instance. These features are available in the public beta.",
   "features.title": "For your whole setup.<br />Before and after launch.",
   "features.kicker": "FEATURES",
   "nav.compare": "Compare",
   "download.button": "Download for Windows",
   "download.warning":
-    "This is a beta version. Windows may show a warning during installation: Minerva does not yet have a Windows digital signature. Download the installer only from the official release page",
+    "This is a public beta. The installer does not yet have a Windows publisher signature, so Windows may show a warning. Download Minerva only from the official release page.",
   "nav.product": "Launcher",
   "nav.content": "Features",
   "nav.security": "Accounts",
-  "nav.status": "Download · 0.4.13",
+  "nav.status": "Download · 0.4.22",
   "nav.home": "Home",
-  "hero.caption": "Minecraft Java / Windows / Beta 0.4.13",
-  "hero.statement": "Your instances.<br />Your way to play.",
+  "hero.caption": "Minecraft Java / Windows / Beta 0.4.22",
+  "hero.statement":
+    'Build.<br /><span class="hero-dim">Play.</span><br />Come back.',
   "hero.copy":
-    "Separate worlds and profiles, control over mods, and clear diagnostics. Minerva brings your Minecraft setup together.",
+    "Your Minecraft in one place. Separate instances and profiles, a combined Modrinth and CurseForge catalog, content management and diagnostics.",
   "hero.explore": "Explore features",
   "hero.by": "Built by Grizzly Dev",
   "hero.scroll": "Scroll to inspect",
@@ -93,9 +94,9 @@ const english = {
   "signal.cache": "For each instance",
   "signal.local": "Side by side",
   "signal.diagnostics": "Concurrent launches",
-  "content.title": "Build your Minecraft.",
+  "content.title": "Two catalogs. One place.",
   "content.copy":
-    "Find and install mods, resource packs and shaders from Modrinth. Import a .mrpack as a new instance or add local files.",
+    "Mods, resource packs and shaders from Modrinth and CurseForge in one catalog with source labels. Browse popular content without a search query and move through result pages. Import .mrpack as a new instance or add local files. CurseForge modpacks are not supported yet.",
   "security.kicker": "ACCOUNTS AND PROFILES",
   "security.title": "Your profile.<br />Clear boundaries.",
   "security.copy":
@@ -106,16 +107,16 @@ const english = {
   "security.passwords": "NO PASSWORD COLLECTION",
   "security.bypass": "NO OWNERSHIP BYPASS",
   "security.storage": "LOCAL ACCOUNT STORAGE",
-  "status.kicker": "PUBLIC BETA / 0.4.13",
+  "status.kicker": "PUBLIC BETA / 0.4.22",
   "status.title": "Your next setup<br />starts here.",
   "status.copy":
-    "Minerva 0.4.13 is available for Windows. Get the installer from the official GitHub Releases page.",
+    "Minerva 0.4.22 is available for Windows. Get the installer from the official GitHub Releases page.",
   "status.active": "Public beta · development continues",
   "footer.privacy": "Privacy",
   "footer.terms": "Terms",
   "footer.disclaimer": "Not affiliated with Mojang Studios or Microsoft.",
   "legal.label": "LEGAL",
-  "legal.date": "Updated September 24, 2026",
+  "legal.date": "Updated September 27, 2026",
   "legal.contact": "Contact",
   "legal.contactCopy": "Questions may be directed to",
   "legal.contactLink": "Grizzly Dev on GitHub",
@@ -130,7 +131,7 @@ const english = {
     "This data is used only to authenticate the user, verify access to Minecraft: Java Edition, launch the game, manage local instances, resolve content, and diagnose failures requested by the user.",
   "privacy.storageTitle": "Storage and transmission",
   "privacy.storageCopy":
-    "Minerva does not operate a proprietary account server. Application state and authentication data remain on the user's device. Authentication requests are sent directly to official Microsoft, Xbox Live, and Minecraft Services endpoints. Mod metadata and downloads may be requested from Modrinth.",
+    "Minerva does not operate its own account server. Application state and authentication data are stored on your device. Sign-in uses Microsoft, Xbox Live and Minecraft Services. The catalog uses Modrinth and CurseForge; CurseForge metadata requests pass through a Minerva service, and files are downloaded from authorized source URLs.",
   "privacy.telemetryTitle": "Telemetry",
   "privacy.telemetryCopy":
     "Minerva does not collect analytics, advertising identifiers, gameplay activity, or background telemetry. Local diagnostic logs are not uploaded automatically.",
@@ -139,7 +140,7 @@ const english = {
     "Account passwords are entered only on Microsoft pages and are not available to Minerva. Separate local/offline profiles do not grant access to servers that require a license. Licensed profiles still require Microsoft authorization.",
   "privacy.devTitle": "Development status",
   "privacy.devCopy":
-    "Minerva 0.4.13 is distributed as a public beta. The installer does not yet have a Windows digital signature.",
+    "Minerva 0.4.22 is distributed as a public beta. The installer does not yet have a Windows digital signature.",
   "terms.title": "Terms of use",
   "terms.lead": "These terms apply to use of Minerva beta and release builds.",
   "terms.accessTitle": "Legitimate access",
@@ -147,13 +148,51 @@ const english = {
     "For a licensed profile, users must sign in with their own Microsoft account and hold the required Minecraft: Java Edition license. Separate local/offline profiles do not grant access to servers requiring a license. Minerva must not be used to bypass ownership, access or platform restrictions.",
   "terms.servicesTitle": "Third-party services",
   "terms.servicesCopy":
-    "Microsoft, Xbox Live, Minecraft Services, Mojang, Fabric, and Modrinth are independent services with their own terms and policies. Users remain responsible for complying with those terms.",
+    "Microsoft, Xbox Live, Minecraft Services, Mojang, Fabric, Modrinth and CurseForge are independent services with their own terms and policies. Users are responsible for complying with them.",
   "terms.devTitle": "Development software",
   "terms.devCopy":
     "Beta builds may be incomplete and may change. Back up important worlds and instance data before using a beta build.",
   "terms.independentTitle": "No affiliation",
   "terms.independentCopy":
     "Minerva is an independent project developed by Grizzly Dev. It is not an official Minecraft product and is not approved by or associated with Mojang Studios or Microsoft.",
+  "hero.fact.catalog": "CONTENT CATALOG",
+  "hero.fact.versions": "MINECRAFT INSTANCES",
+  "hero.fact.locale": "INTERFACE",
+  "nav.new": "What’s new",
+  "new.kicker": "NEW IN 0.4.22",
+  "new.title": "More ways<br />to make it yours.",
+  "new.tab.catalog": "One catalog",
+  "new.tab.shortcuts": "Instance shortcuts",
+  "new.tab.warm": "Warm Return",
+  "new.catalog.kicker": "CONTENT / TWO SOURCES",
+  "new.catalog.title": "Find the next addition<br />to your setup.",
+  "new.catalog.copy":
+    "Popular mods, resource packs and shaders appear right away. Filter the catalog, browse result pages and choose: install a suitable version in one click or pick a specific version manually.",
+  "new.catalog.note": "CurseForge modpacks are not supported yet.",
+  "art.catalog": "CATALOG",
+  "art.mods": "Mods",
+  "art.resourcepacks": "Resource packs",
+  "art.shaders": "Shaders",
+  "art.popular": "Popular · result pages",
+  "new.shortcuts.kicker": "LAUNCH / YOUR PROFILE",
+  "new.shortcuts.title": "The right instance.<br />Right from your desktop.",
+  "new.shortcuts.copy":
+    "Create a shortcut for your chosen instance and pin a launch profile to it. The icon uses your skin’s head when available.",
+  "new.shortcuts.note":
+    "The shortcut remembers the instance and profile. Authorization requirements still apply.",
+  "art.profile": "Selected profile",
+  "new.warm.kicker": "EXPERIMENT / FABRIC 1.21.11",
+  "new.warm.title": "A break between sessions.<br />Return from the tray.",
+  "new.warm.copy":
+    "After returning to the main menu, the game can stay running in memory and hide in the tray. Bring it back without a full JVM restart. Rendering is limited to 2 FPS while on standby.",
+  "new.warm.note":
+    "Only for supported Fabric 1.21.11. Enabled manually. The game process stays in memory — lower RAM usage is not guaranteed.",
+  "new.warm.schedule":
+    "Optional: prepare the game after Windows sign-in or on a schedule. Both settings are enabled separately.",
+  "art.standby": "Ready in memory",
+  "art.render": "Standby rendering",
+  "art.schedule": "Windows sign-in · schedule",
+  "new.illustration": "Feature illustrations, not app screenshots.",
 };
 
 const localizedElements = [...document.querySelectorAll("[data-i18n]")];
@@ -182,6 +221,29 @@ function setLanguage(language) {
   });
 
   document.documentElement.lang = language;
+  const labels = [
+    [
+      ".release-tabs",
+      "aria-label",
+      "Возможности версии 0.4.22",
+      "Features in 0.4.22",
+    ],
+    [".brand[aria-label]", "aria-label", "Главная Minerva", "Minerva home"],
+    ["footer nav", "aria-label", "Навигация в подвале", "Footer navigation"],
+    [".auth-flow", "aria-label", "Процесс авторизации", "Sign-in flow"],
+    [".signal-row", "aria-label", "Принципы продукта", "Product principles"],
+    [
+      ".app-window img",
+      "alt",
+      "Экран инстансов в приложении Minerva",
+      "Instance screen in Minerva",
+    ],
+  ];
+  labels.forEach(([selector, attribute, ru, en]) => {
+    document
+      .querySelector(selector)
+      ?.setAttribute(attribute, useEnglish ? en : ru);
+  });
   document
     .querySelector(".nav-toggle")
     ?.setAttribute(
@@ -279,3 +341,19 @@ document.addEventListener("keydown", (event) => {
     navigationToggle.focus();
   }
 });
+
+// All panels remain readable without JavaScript; tabs progressively enhance them.
+const panelButtons = [...document.querySelectorAll("[data-panel]")];
+const releasePanels = [...document.querySelectorAll(".release-panel")];
+function selectPanel(id) {
+  panelButtons.forEach((button) =>
+    button.setAttribute("aria-pressed", String(button.dataset.panel === id)),
+  );
+  releasePanels.forEach((panel) => {
+    panel.hidden = panel.id !== `panel-${id}`;
+  });
+}
+panelButtons.forEach((button) =>
+  button.addEventListener("click", () => selectPanel(button.dataset.panel)),
+);
+if (panelButtons.length) selectPanel("catalog");
