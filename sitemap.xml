@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://grizzlydeveloper.github.io/minerva-website/</loc></url>
-  <url><loc>https://grizzlydeveloper.github.io/minerva-website/privacy.html</loc></url>
-  <url><loc>https://grizzlydeveloper.github.io/minerva-website/terms.html</loc></url>
+<url><loc>https://minervalauncher.com/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/privacy.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/terms.html</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/install/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/first-steps/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/profiles/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/updates/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/create-instance/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/migration-modrinth/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/migration-tl/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/archive-import/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/backups/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/instance-settings/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/install-content/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/manage-content/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/repair/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/startup-errors/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/resume/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/manifest/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/cloud-save/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/share/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/cloud-restore/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/missing-files/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/keybinds/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/warm-return/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/profile-switch/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/offline/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/contact/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/migration-prism/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/shared-folders/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/clone-instance/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://minervalauncher.com/help/appearance/</loc><lastmod>2026-10-19</lastmod></url>
 </urlset>

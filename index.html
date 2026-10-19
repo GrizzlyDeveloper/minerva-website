@@ -1,767 +1,84 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Minerva — лаунчер Minecraft Java для Windows. Инстанции, профили, Modrinth и CurseForge, диагностика и ZIP-экспорт. Публичная бета 0.4.22."
-    />
-    <meta name="theme-color" content="#030303" />
-    <meta property="og:title" content="Minerva" />
-    <meta
-      property="og:description"
-      content="Инстансы Minecraft, контент Fabric и диагностика в одном сфокусированном лаунчере."
-    />
-    <meta
-      property="og:image"
-      content="https://grizzlydeveloper.github.io/minerva-website/assets/minerva-app.png"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://grizzlydeveloper.github.io/minerva-website/"
-    />
-    <link
-      rel="canonical"
-      href="https://grizzlydeveloper.github.io/minerva-website/"
-    />
-    <link rel="icon" href="assets/favicon.png" />
-    <link rel="stylesheet" href="styles.css?v=22" />
-    <link rel="stylesheet" href="reference.css?v=22" />
-    <script src="script.js?v=22" defer></script>
-    <title>Minerva | Лаунчер Minecraft Java</title>
-  </head>
-  <body data-page="home">
-    <a class="skip-link" href="#content"
-      ><span data-i18n="nav.skip">К возможностям</span></a
-    >
-    <header class="site-header">
-      <a class="brand" href="#concept" aria-label="Главная Minerva"
-        ><span class="brand-mark" aria-hidden="true">M</span
-        ><span>MINERVA</span></a
-      >
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-label="Открыть навигацию"
-        aria-expanded="false"
-        title="Меню"
-      >
-        <span></span><span></span>
-      </button>
-      <nav class="header-nav" aria-label="Основная навигация">
-        <a data-i18n="nav.new" href="#new">Что нового</a>
-        <a href="#product" data-i18n="nav.product">Лаунчер</a
-        ><a href="#content" data-i18n="nav.content">Возможности</a
-        ><a data-i18n="nav.compare" href="#comparison">Сравнение</a
-        ><a href="#security" data-i18n="nav.security">Аккаунты</a>
-      </nav>
-      <div class="header-tools">
-        <div class="language-switch" role="group" aria-label="Выбор языка">
-          <span class="language-thumb" aria-hidden="true"></span
-          ><button type="button" data-language="ru" class="is-active">RU</button
-          ><button type="button" data-language="en">EN</button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Minerva — лаунчер Minecraft Java для Windows. Сборки, моды, игровые профили и Warm Return.">
+  <meta name="theme-color" content="#111112">
+  <meta property="og:title" content="Minerva — Minecraft Java">
+  <meta property="og:image" content="https://minervalauncher.com/assets/minerva-cube.svg">
+  <link rel="canonical" href="https://minervalauncher.com/">
+  <link rel="icon" href="/assets/favicon.png?v=brand-20261017">
+  <link rel="stylesheet" href="/home.css?v=motion-20261019">
+  <script src="/home.js?v=content-20261019" defer></script>
+  <title>Minerva | Minecraft Java</title>
+
+</head>
+<body>
+  <a class="skip" href="#main" data-text="skip">К содержимому</a>
+  <header>
+    <a class="brand" href="/" aria-label="Minerva"><svg aria-hidden="true" focusable="false" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Minerva cube</title><polygon id="left" fill="#00bd78" points="62.01031,176 138.220545,220 138.220545,412 62.01031,368"/><polygon id="center" fill="#087452" points="190.182069,200 280.248711,252 280.248711,466 190.182069,414"/><polygon id="right" fill="#064936" points="449.98969,176 346.066642,236 346.066642,428 449.98969,368"/><polygon id="chevron" fill="#00c982" points="110.507732,126 256,210 401.492268,126 449.98969,154 256,266 62.01031,154"/><polygon id="cap-edge" fill="#087452" points="380.707658,114 256,186 256,191 380.707658,119"/><polygon id="cap" fill="#00c982" points="256,42 380.707658,114 256,186 131.292342,114"/></svg>MINERVA</a>
+    <nav aria-label="Навигация" data-nav><a href="#launcher" data-text="launcher">Возможности</a><a href="/help/" data-text="guides">Гайды</a><a href="#changelog" data-text="changelog">История обновлений</a><a href="/account/" data-text="account">Личный кабинет</a></nav>
+    <div class="languages" role="group" aria-label="Language"><button type="button" data-language="ru" aria-pressed="true">RU</button><button type="button" data-language="en" aria-pressed="false">EN</button></div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow"><span class="status-dot" aria-hidden="true"></span>MINECRAFT JAVA <span class="eyebrow-divider">/</span> WINDOWS x64</p>
+          <h1 id="title">Minerva<span class="title-period">.</span></h1>
+          <p class="hero-motto">Easy. Quick. <span>Powerful.</span></p>
+          <p class="intro" data-text="intro">Minecraft Java для Windows x64. Отдельные сборки, доступный контент и ваши игровые профили.</p>
+          <div class="actions"><a class="primary" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span data-text="downloadWindows">Скачать для Windows</span></a><a class="secondary" href="/help/first-steps/"><span data-text="getStarted">Начать работу →</span></a></div>
+          <p class="muted hero-release" id="hero-release" role="status">Windows x64</p>
         </div>
-        <a class="pill header-cta" href="#status"
-          ><span data-i18n="nav.status">Скачать · 0.4.22</span>
-          <span aria-hidden="true">↓</span></a
-        >
+        <div class="brand-scene" aria-hidden="true">
+          <div class="scene-depth">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="logo-pedestal"></div>
+            <svg aria-hidden="true" focusable="false" class="hero-logo" width="360" height="360" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Minerva cube</title><polygon id="left" fill="#00bd78" points="62.01031,176 138.220545,220 138.220545,412 62.01031,368"/><polygon id="center" fill="#087452" points="190.182069,200 280.248711,252 280.248711,466 190.182069,414"/><polygon id="right" fill="#064936" points="449.98969,176 346.066642,236 346.066642,428 449.98969,368"/><polygon id="chevron" fill="#00c982" points="110.507732,126 256,210 401.492268,126 449.98969,154 256,266 62.01031,154"/><polygon id="cap-edge" fill="#087452" points="380.707658,114 256,186 256,191 380.707658,119"/><polygon id="cap" fill="#00c982" points="256,42 380.707658,114 256,186 131.292342,114"/></svg>
+            <div class="scene-label label-top"><span></span> MINERVA / JAVA</div>
+            <div class="scene-label label-bottom">BUILT AROUND YOUR GAME <span>↗</span></div>
+            <span class="scene-cross cross-one">+</span><span class="scene-cross cross-two">+</span>
+          </div>
+        </div>
       </div>
-    </header>
-
-    <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
-    <main class="landing-scroll" data-scroll-container>
-      <section
-        class="hero snap-section"
-        id="concept"
-        aria-labelledby="hero-title"
-      >
-        <div class="hero-veil" aria-hidden="true"></div>
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-content reveal">
-          <p class="caption" data-i18n="hero.caption">
-            Minecraft Java / Windows / Beta 0.4.22
-          </p>
-          <p class="hero-wordmark">MINERVA</p>
-          <h1 id="hero-title" class="hero-statement" data-i18n="hero.statement">
-            Собирайте.<br /><span class="hero-dim">Играйте.</span
-            ><br />Возвращайтесь.
-          </h1>
-          <p class="hero-copy" data-i18n="hero.copy">
-            Ваш Minecraft в одном месте. Отдельные сборки и профили, общий
-            каталог Modrinth и CurseForge, управление контентом и диагностика.
-          </p>
-          <div class="hero-actions">
-            <a
-              class="pill pill-strong download-link"
-              href="https://github.com/GrizzlyDeveloper/Minerva-Releases/releases/tag/v0.4.22"
-              ><span data-i18n="download.button">Скачать для Windows</span>
-              <span aria-hidden="true">↗</span></a
-            ><a class="pill" href="#content"
-              ><span data-i18n="hero.explore">Возможности</span>
-              <span aria-hidden="true">↓</span></a
-            >
-          </div>
-          <p data-i18n="download.warning" class="download-warning">
-            Это публичная бета. Установщик пока не имеет подписи издателя
-            Windows, поэтому Windows может показать предупреждение. Скачивайте
-            Minerva только с официальной страницы релиза.
-          </p>
-        </div>
-        <div class="hero-facts">
-          <div>
-            <span data-i18n="hero.fact.catalog">КАТАЛОГ КОНТЕНТА</span
-            ><strong>Modrinth + CurseForge</strong>
-          </div>
-          <div>
-            <span data-i18n="hero.fact.versions">СБОРКИ MINECRAFT</span
-            ><strong>Vanilla + Fabric</strong>
-          </div>
-          <div>
-            <span data-i18n="hero.fact.locale">ИНТЕРФЕЙС</span
-            ><strong>RU / EN</strong>
-          </div>
-        </div>
-        <div class="hero-footer">
-          <span data-i18n="hero.by">Разработка Grizzly Dev</span
-          ><span class="scroll-cue"
-            ><i></i> <span data-i18n="hero.scroll">Листайте дальше</span></span
-          >
-        </div>
-      </section>
-
-      <section
-        class="release-showcase snap-section"
-        id="new"
-        aria-labelledby="new-title"
-      >
-        <div class="section-ghost" aria-hidden="true">MORE POSSIBILITIES</div>
-        <div class="section-copy">
-          <div class="section-kicker">
-            <span>01</span><span data-i18n="new.kicker">НОВОЕ В 0.4.22</span>
-          </div>
-          <h2 data-i18n="new.title" id="new-title">
-            Больше способов<br />сделать игру своей.
-          </h2>
-        </div>
-        <div
-          class="release-tabs"
-          role="group"
-          aria-label="Возможности версии 0.4.22"
-        >
-          <button
-            data-i18n="new.tab.catalog"
-            type="button"
-            data-panel="catalog"
-            aria-controls="panel-catalog"
-            aria-pressed="false"
-          >
-            Единый каталог</button
-          ><button
-            data-i18n="new.tab.shortcuts"
-            type="button"
-            data-panel="shortcuts"
-            aria-controls="panel-shortcuts"
-            aria-pressed="false"
-          >
-            Ярлыки сборок</button
-          ><button
-            data-i18n="new.tab.warm"
-            type="button"
-            data-panel="warm"
-            aria-controls="panel-warm"
-            aria-pressed="false"
-          >
-            Warm Return
-          </button>
-        </div>
-        <div class="release-panels">
-          <article class="release-panel" id="panel-catalog">
-            <div class="release-copy">
-              <p data-i18n="new.catalog.kicker" class="caption">
-                КОНТЕНТ / ДВА ИСТОЧНИКА
-              </p>
-              <h3 data-i18n="new.catalog.title">
-                Найдите следующее<br />дополнение к своей сборке.
-              </h3>
-              <p data-i18n="new.catalog.copy">
-                Популярные моды, ресурспаки и шейдеры видны сразу. Фильтруйте
-                каталог, листайте страницы и выбирайте: установить подходящую
-                версию одним нажатием или указать конкретную вручную.
-              </p>
-              <p data-i18n="new.catalog.note" class="panel-note">
-                CurseForge-модпаки пока не поддерживаются.
-              </p>
-            </div>
-            <div class="release-art" aria-hidden="true">
-              <div class="catalog-preview">
-                <div class="preview-top">
-                  MINERVA / <span data-i18n="art.catalog">КАТАЛОГ</span>
-                </div>
-                <div class="source-pills">
-                  <span>Modrinth</span><span>CurseForge</span>
-                </div>
-                <div class="catalog-row">
-                  <b>◈</b>
-                  <div>
-                    <span data-i18n="art.mods">Моды</span
-                    ><small>Modrinth</small>
-                  </div>
-                  <span>↗</span>
-                </div>
-                <div class="catalog-row">
-                  <b>▧</b>
-                  <div>
-                    <span data-i18n="art.resourcepacks">Ресурспаки</span
-                    ><small>CurseForge</small>
-                  </div>
-                  <span>↗</span>
-                </div>
-                <div class="catalog-row">
-                  <b>✧</b>
-                  <div>
-                    <span data-i18n="art.shaders">Шейдеры</span
-                    ><small>Modrinth</small>
-                  </div>
-                  <span>↗</span>
-                </div>
-                <div class="preview-bottom">
-                  <span data-i18n="art.popular"
-                    >Популярное · страницы результатов</span
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="release-panel" id="panel-shortcuts">
-            <div class="release-copy">
-              <p data-i18n="new.shortcuts.kicker" class="caption">
-                ЗАПУСК / ВАШ ПРОФИЛЬ
-              </p>
-              <h3 data-i18n="new.shortcuts.title">
-                Нужная сборка.<br />Прямо с рабочего стола.
-              </h3>
-              <p data-i18n="new.shortcuts.copy">
-                Создайте ярлык для выбранной сборки и закрепите за ним профиль
-                запуска. Для иконки используется голова скина, когда она
-                доступна.
-              </p>
-              <p data-i18n="new.shortcuts.note" class="panel-note">
-                Ярлык сохраняет выбор сборки и профиля. Требования авторизации
-                остаются прежними.
-              </p>
-            </div>
-            <div class="release-art" aria-hidden="true">
-              <div class="shortcut-preview">
-                <div class="pixel-head"><i></i><i></i></div>
-                <span class="shortcut-arrow">↗</span
-                ><strong>Fabric 1.21.11</strong
-                ><span data-i18n="art.profile">Выбранный профиль</span>
-                <div class="shortcut-orbit"></div>
-              </div>
-            </div>
-          </article>
-          <article class="release-panel" id="panel-warm">
-            <div class="release-copy">
-              <p data-i18n="new.warm.kicker" class="caption">
-                ЭКСПЕРИМЕНТ / FABRIC 1.21.11
-              </p>
-              <h3 data-i18n="new.warm.title">
-                Пауза между сессиями.<br />Возвращение из трея.
-              </h3>
-              <p data-i18n="new.warm.copy">
-                После выхода в главное меню игра может оставаться запущенной в
-                памяти и скрываться в трей. Верните её без полного перезапуска
-                JVM. В ожидании рендер ограничен до 2 FPS.
-              </p>
-              <p data-i18n="new.warm.note" class="panel-note">
-                Только для поддерживаемой Fabric 1.21.11. Включается вручную.
-                Процесс игры остаётся в памяти — снижение расхода ОЗУ не
-                гарантируется.
-              </p>
-              <p data-i18n="new.warm.schedule">
-                По желанию: подготовка игры после входа в Windows или по
-                расписанию. Обе настройки включаются отдельно.
-              </p>
-            </div>
-            <div class="release-art" aria-hidden="true">
-              <div class="warm-preview">
-                <div class="warm-orbit"><span>M</span></div>
-                <div class="warm-status">
-                  <i></i> <span data-i18n="art.standby">Готова в памяти</span>
-                </div>
-                <strong>2 <small>FPS</small></strong
-                ><span data-i18n="art.render">Рендер в ожидании</span>
-                <div class="warm-options">
-                  <span data-i18n="art.schedule"
-                    >Вход в Windows · расписание</span
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <p data-i18n="new.illustration" class="illustration-note">
-          Схемы возможностей, не скриншоты приложения.
-        </p>
-      </section>
-      <section class="showcase snap-section" id="product">
-        <div class="section-copy reveal">
-          <div class="section-kicker">
-            <span>02</span><span data-i18n="product.kicker">ЛАУНЧЕР</span>
-          </div>
-          <h2 data-i18n="product.title">
-            Разные миры.<br />Одна цельная система.
-          </h2>
-          <p data-i18n="product.copy">
-            Vanilla и Fabric в отдельных инстанциях: у каждой свои миры, моды и
-            настройки, включая версию Fabric Loader. Назначьте профиль запуска
-            по умолчанию каждой сборке и запускайте разные инстанции
-            одновременно под разными профилями.
-          </p>
-        </div>
-        <div class="product-stage reveal" style="--delay: 120ms">
-          <div class="stage-aura" aria-hidden="true"></div>
-          <figure class="app-window glass-panel">
-            <figcaption>
-              <span
-                ><i class="window-dot"></i>
-                <span data-i18n="product.window">MINERVA / ИНСТАНСЫ</span></span
-              ><span data-i18n="product.build">ОБЗОР ИНТЕРФЕЙСА</span>
-            </figcaption>
-            <img
-              src="assets/minerva-app.png"
-              alt="Экран инстансов в приложении Minerva"
-            />
-          </figure>
-        </div>
-        <div class="signal-row reveal" aria-label="Принципы продукта">
-          <div>
-            <strong data-i18n="signal.isolated">Своя сборка</strong
-            ><span data-i18n="signal.instance">Vanilla или Fabric</span>
-          </div>
-          <div>
-            <strong data-i18n="signal.shared">Свой профиль</strong
-            ><span data-i18n="signal.cache">Для каждой инстанции</span>
-          </div>
-          <div>
-            <strong data-i18n="signal.local">Вместе</strong
-            ><span data-i18n="signal.diagnostics">Параллельные запуски</span>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="capabilities snap-section"
-        id="content"
-        aria-labelledby="features-title"
-      >
-        <div class="section-copy reveal">
-          <div class="section-kicker">
-            <span>03</span><span data-i18n="features.kicker">ВОЗМОЖНОСТИ</span>
-          </div>
-          <h2 data-i18n="features.title" id="features-title">
-            Всё для вашей сборки.<br />До и после запуска.
-          </h2>
-          <p data-i18n="features.copy">
-            От установки первого мода до восстановления сборки. Эти возможности
-            уже доступны в публичной бете.
-          </p>
-        </div>
-        <div class="capability-grid">
-          <article class="glass-panel feature reveal">
-            <span data-i18n="content.number" class="feature-number"
-              >01 / КОНТЕНТ</span
-            >
-            <div>
-              <h3 data-i18n="content.title">Два каталога. Одно место.</h3>
-              <p data-i18n="content.copy">
-                Моды, ресурспаки и шейдеры из Modrinth и CurseForge в едином
-                каталоге с метками источника. Смотрите популярное без поискового
-                запроса и листайте страницы результатов. Импорт .mrpack создаёт
-                новую инстанцию; доступны и локальные файлы. CurseForge-модпаки
-                пока не поддерживаются.
-              </p>
-            </div>
-            <span data-i18n="content.foot" class="feature-action"
-              >Modrinth · CurseForge · .mrpack</span
-            >
-          </article>
-          <article class="glass-panel feature reveal">
-            <span data-i18n="versions.number" class="feature-number"
-              >02 / ВЕРСИИ</span
-            >
-            <div>
-              <h3 data-i18n="versions.title">
-                Обновляйте с возможностью отката.
-              </h3>
-              <p data-i18n="versions.copy">
-                Устанавливайте подходящую версию одним нажатием или выбирайте её
-                вручную. Проверяйте зависимости перед запуском, обновляйте
-                контент и возвращайтесь к сохранённой версии, если обновление не
-                подошло.
-              </p>
-            </div>
-            <span data-i18n="versions.foot" class="feature-action"
-              >Выбор версии · обновление · откат</span
-            >
-          </article>
-          <article class="glass-panel feature reveal">
-            <span data-i18n="launch.number" class="feature-number"
-              >03 / ЗАПУСК</span
-            >
-            <div>
-              <h3 data-i18n="launch.title">Готовые файлы — сразу в дело.</h3>
-              <p data-i18n="launch.copy">
-                По вашему выбору — запуск из уже подготовленных локальных файлов
-                без повторной сетевой проверки файлов игры. Для лицензионного
-                профиля по-прежнему нужна действующая Microsoft-авторизация.
-                Подходящая Java 21 для современных версий Minecraft
-                устанавливается автоматически, если её нет.
-              </p>
-            </div>
-            <span data-i18n="launch.foot" class="feature-action"
-              >Локальный запуск · Java 21</span
-            >
-          </article>
-          <article class="glass-panel feature reveal">
-            <span data-i18n="diagnostics.number" class="feature-number"
-              >04 / ДИАГНОСТИКА</span
-            >
-            <div>
-              <h3 data-i18n="diagnostics.title">Больше контекста о вылете.</h3>
-              <p data-i18n="diagnostics.copy">
-                Диагностика показывает свидетельства из логов и историю вылетов.
-                После успешного запуска старый краш остаётся в истории, а не в
-                текущих проблемах. Живые логи доступны отдельно для каждой
-                инстанции, в том числе при параллельной игре.
-              </p>
-            </div>
-            <span data-i18n="diagnostics.foot" class="feature-action"
-              >Свидетельства · история · живые логи</span
-            >
-          </article>
-          <article class="glass-panel feature reveal">
-            <span data-i18n="files.number" class="feature-number"
-              >05 / ФАЙЛЫ</span
-            >
-            <div>
-              <h3 data-i18n="files.title">Восстановите. Возьмите с собой.</h3>
-              <p data-i18n="files.copy">
-                Repair проверяет и восстанавливает управляемые файлы без
-                намеренного удаления миров, конфигов и пользовательского
-                контента. При ZIP-экспорте вы выбираете содержимое и можете
-                включить дополнительные папки — например, метки Xaero.
-              </p>
-            </div>
-            <span data-i18n="files.foot" class="feature-action"
-              >Repair · ZIP с выбором папок</span
-            >
-          </article>
-          <article class="glass-panel feature reveal">
-            <span data-i18n="everyday.number" class="feature-number"
-              >06 / КАЖДЫЙ ДЕНЬ</span
-            >
-            <div>
-              <h3 data-i18n="everyday.title">На вашем языке. Под рукой.</h3>
-              <p data-i18n="everyday.copy">
-                Русский и английский интерфейс: выберите язык при установке или
-                смените его в настройках. Пока игра запущена, Minerva работает
-                через системный трей. Обновления лаунчера доступны через GitHub
-                Releases.
-              </p>
-            </div>
-            <span data-i18n="everyday.foot" class="feature-action"
-              >RU / EN · трей · обновления</span
-            >
-          </article>
-        </div>
-      </section>
-
-      <section
-        class="comparison snap-section"
-        id="comparison"
-        aria-labelledby="comparison-title"
-      >
-        <div class="section-copy reveal">
-          <div class="section-kicker">
-            <span>04</span
-            ><span data-i18n="compare.kicker">СРАВНЕНИЕ СЦЕНАРИЕВ</span>
-          </div>
-          <h2 data-i18n="compare.title" id="comparison-title">
-            Меньше ручных шагов.<br />Больше контроля.
-          </h2>
-          <p data-i18n="compare.copy">
-            Сравниваем базовый сценарий работы с лаунчером и то, как его можно
-            организовать в Minerva. Это не оценка конкретных конкурентов.
-          </p>
-        </div>
-        <div class="comparison-shell">
-          <table>
-            <caption class="sr-only" data-i18n="compare.caption">
-              Семь сценариев работы с лаунчером
-            </caption>
-            <thead>
-              <tr>
-                <th data-i18n="compare.task" scope="col">Задача</th>
-                <th data-i18n="compare.base" scope="col">Базовый сценарий</th>
-                <th scope="col" class="minerva-column">
-                  MINERVA <span class="table-beta">BETA 0.4.22</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th data-i18n="compare.profile.title" scope="row">
-                  Профиль для сборки
-                </th>
-                <td>
-                  <span
-                    class="mobile-label"
-                    aria-hidden="true"
-                    data-i18n="compare.base"
-                    >Базовый сценарий</span
-                  ><span data-i18n="compare.profile.base"
-                    >Выбирать профиль перед игрой.</span
-                  >
-                </td>
-                <td class="minerva-column">
-                  <span class="mobile-label" aria-hidden="true">MINERVA</span
-                  ><span data-i18n="compare.profile.benefit"
-                    >Назначить профиль по умолчанию каждой инстанции.</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th data-i18n="compare.parallel.title" scope="row">
-                  Параллельная игра
-                </th>
-                <td>
-                  <span
-                    class="mobile-label"
-                    aria-hidden="true"
-                    data-i18n="compare.base"
-                    >Базовый сценарий</span
-                  ><span data-i18n="compare.parallel.base"
-                    >Запустить одну игровую сессию.</span
-                  >
-                </td>
-                <td class="minerva-column">
-                  <span class="mobile-label" aria-hidden="true">MINERVA</span
-                  ><span data-i18n="compare.parallel.benefit"
-                    >Запускать разные инстанции одновременно под разными
-                    профилями.</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th data-i18n="compare.local.title" scope="row">
-                  Локальный запуск
-                </th>
-                <td>
-                  <span
-                    class="mobile-label"
-                    aria-hidden="true"
-                    data-i18n="compare.base"
-                    >Базовый сценарий</span
-                  ><span data-i18n="compare.local.base"
-                    >Подготовить файлы и запустить игру.</span
-                  >
-                </td>
-                <td class="minerva-column">
-                  <span class="mobile-label" aria-hidden="true">MINERVA</span
-                  ><span data-i18n="compare.local.benefit"
-                    >Выбрать запуск из готовых файлов без повторной сетевой
-                    проверки. Для лицензионного профиля нужна действующая
-                    Microsoft-авторизация.</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th data-i18n="compare.mods.title" scope="row">Версии модов</th>
-                <td>
-                  <span
-                    class="mobile-label"
-                    aria-hidden="true"
-                    data-i18n="compare.base"
-                    >Базовый сценарий</span
-                  ><span data-i18n="compare.mods.base"
-                    >Установить мод в сборку.</span
-                  >
-                </td>
-                <td class="minerva-column">
-                  <span class="mobile-label" aria-hidden="true">MINERVA</span
-                  ><span data-i18n="compare.mods.benefit"
-                    >Выбирать совместимую версию, обновлять и возвращать
-                    сохранённую версию при неудачном обновлении.</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th data-i18n="compare.crash.title" scope="row">Диагностика</th>
-                <td>
-                  <span
-                    class="mobile-label"
-                    aria-hidden="true"
-                    data-i18n="compare.base"
-                    >Базовый сценарий</span
-                  ><span data-i18n="compare.crash.base"
-                    >Открыть лог после вылета.</span
-                  >
-                </td>
-                <td class="minerva-column">
-                  <span class="mobile-label" aria-hidden="true">MINERVA</span
-                  ><span data-i18n="compare.crash.benefit"
-                    >Видеть свидетельства и историю; успешный запуск снимает
-                    старую проблему с текущей диагностики.</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th data-i18n="compare.zip.title" scope="row">
-                  Содержимое ZIP
-                </th>
-                <td>
-                  <span
-                    class="mobile-label"
-                    aria-hidden="true"
-                    data-i18n="compare.base"
-                    >Базовый сценарий</span
-                  ><span data-i18n="compare.zip.base"
-                    >Перенести файлы сборки в архив.</span
-                  >
-                </td>
-                <td class="minerva-column">
-                  <span class="mobile-label" aria-hidden="true">MINERVA</span
-                  ><span data-i18n="compare.zip.benefit"
-                    >Выбирать папки для экспорта, включая дополнительные данные
-                    и метки Xaero.</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th data-i18n="compare.language.title" scope="row">
-                  Русский интерфейс
-                </th>
-                <td>
-                  <span
-                    class="mobile-label"
-                    aria-hidden="true"
-                    data-i18n="compare.base"
-                    >Базовый сценарий</span
-                  ><span data-i18n="compare.language.base"
-                    >Выбрать язык для работы.</span
-                  >
-                </td>
-                <td class="minerva-column">
-                  <span class="mobile-label" aria-hidden="true">MINERVA</span
-                  ><span data-i18n="compare.language.benefit"
-                    >Выбрать RU / EN в установщике и переключать язык в
-                    настройках.</span
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="security snap-section" id="security">
-        <div class="section-copy reveal">
-          <div class="section-kicker">
-            <span>05</span
-            ><span data-i18n="security.kicker">АККАУНТЫ И ПРОФИЛИ</span>
-          </div>
-          <h2 data-i18n="security.title">
-            Свой профиль.<br />Понятные границы.
-          </h2>
-          <p data-i18n="security.copy">
-            Вход через Microsoft с автоматическим обновлением сессии и отдельные
-            локальные/offline-профили. Локальный профиль не предоставляет доступ
-            к серверам, требующим лицензию. Запуск из локальных файлов не
-            отменяет Microsoft-авторизацию для лицензионного профиля.
-          </p>
-        </div>
-        <div
-          class="auth-flow reveal"
-          style="--delay: 100ms"
-          aria-label="Процесс авторизации"
-        >
-          <div class="flow-node glass-panel">
-            <span>01</span><strong>Microsoft</strong
-            ><small data-i18n="security.device">Авторизация устройства</small>
-          </div>
-          <i class="flow-line"></i>
-          <div class="flow-node glass-panel">
-            <span>02</span><strong>Xbox Live</strong
-            ><small data-i18n="security.identity">Цепочка идентификации</small>
-          </div>
-          <i class="flow-line"></i>
-          <div class="flow-node glass-panel">
-            <span>03</span><strong>Minecraft</strong
-            ><small data-i18n="security.ownership">Проверка владения</small>
-          </div>
-        </div>
-        <div class="security-notes reveal">
-          <span data-i18n="security.passwords">НЕ СОБИРАЕМ ПАРОЛИ</span
-          ><span data-i18n="security.bypass">НЕ ОБХОДИМ ЛИЦЕНЗИЮ</span
-          ><span data-i18n="security.storage">ЛОКАЛЬНОЕ ХРАНЕНИЕ</span>
-        </div>
-      </section>
-
-      <section class="final-section snap-section" id="status">
-        <div class="final-word" aria-hidden="true">MINERVA</div>
-        <div class="final-content reveal">
-          <div class="section-kicker">
-            <span>06</span
-            ><span data-i18n="status.kicker">ПУБЛИЧНАЯ БЕТА / 0.4.22</span>
-          </div>
-          <h2 data-i18n="status.title">
-            Ваша следующая сборка<br />начинается здесь.
-          </h2>
-          <p data-i18n="status.copy">
-            Minerva 0.4.22 уже доступна для Windows. Скачайте установщик с
-            официальной страницы GitHub Releases.
-          </p>
-          <div class="hero-actions">
-            <a
-              class="pill pill-strong download-link"
-              href="https://github.com/GrizzlyDeveloper/Minerva-Releases/releases/tag/v0.4.22"
-              ><span data-i18n="download.button">Скачать для Windows</span>
-              <span aria-hidden="true">↗</span></a
-            >
-          </div>
-          <p data-i18n="download.warning" class="download-warning">
-            Это публичная бета. Установщик пока не имеет подписи издателя
-            Windows, поэтому Windows может показать предупреждение. Скачивайте
-            Minerva только с официальной страницы релиза.
-          </p>
-          <div class="status-line">
-            <i></i
-            ><span data-i18n="status.active"
-              >Публичная бета · разработка продолжается</span
-            >
-          </div>
-        </div>
-        <footer>
-          <a class="brand footer-brand" href="#concept"
-            ><span class="brand-mark" aria-hidden="true">M</span
-            ><span>MINERVA</span></a
-          >
-          <nav aria-label="Навигация в подвале">
-            <a href="privacy.html" data-i18n="footer.privacy"
-              >Конфиденциальность</a
-            ><a href="terms.html" data-i18n="footer.terms">Условия</a
-            ><a href="https://github.com/GrizzlyDeveloper" rel="noreferrer"
-              >Grizzly Dev</a
-            >
-          </nav>
-          <p data-i18n="footer.disclaimer">
-            Проект не связан с Mojang Studios или Microsoft.
-          </p>
-        </footer>
-      </section>
-    </main>
-  </body>
+      <div class="hero-bottom"><p data-motion-text="heroFoot">Меньше рутины. Больше игры.</p><a href="#launcher"><span data-motion-text="explore">Что внутри</span><span class="scroll-arrow" aria-hidden="true">↓</span></a><span class="hero-index" aria-hidden="true">01 — MINERVA</span></div>
+    </section>
+    <section class="band" id="launcher" aria-labelledby="launcher-title">
+      <div class="section-heading"><p class="eyebrow" data-text="workspace">ВАШ MINECRAFT</p><h2 id="launcher-title" data-text="launcherHeading">Всё на своих местах.</h2></div>
+      <div class="features">
+        <article><span class="number">01</span><h3 data-text="instancesTitle">Сборки</h3><p data-text="instancesCopy">Отдельные инстанции, версии Minecraft и настройки. Импорт и экспорт в ZIP.</p><a href="/help/create-instance/" data-text="more">Подробнее →</a></article>
+        <article><span class="number">02</span><h3 data-text="modsTitle">Контент и починка</h3><p data-text="modsCopy">Modrinth и CurseForge, версии модов, зависимости и сгруппированные отчёты. Неизвестные конфликты требуют ручного решения.</p><a href="/help/repair/" data-text="more">Подробнее →</a></article>
+        <article><span class="number">03</span><h3 data-text="profilesTitle">Профили</h3><p data-text="profilesCopy">Microsoft и локальные профили. Переключение в игре — Fabric 1.21.1, 1.21.11, 26.2 и 26.3 после выхода с сервера.</p><a href="/help/profiles/" data-text="more">Подробнее →</a></article>
+        <article><span class="number">04</span><h3 data-text="warmTitle">Warm Return</h3><p data-text="warmCopy">Вернитесь к игре, оставленной в памяти. Отдельная опция для Fabric 1.21.1 и 1.21.11, выключена по умолчанию; Minecraft продолжает использовать RAM.</p><a href="/help/warm-return/" data-text="more">Подробнее →</a></article>
+      </div>
+    </section>
+    <section class="band editorial migration-section" id="migration"><div class="editorial-copy"><p class="eyebrow" data-text="migrationLabel">ПЕРЕХОД В MINERVA</p><h2 data-text="migrationTitle">Ваша сборка. Новое место.</h2><p data-text="migrationCopy">Перенесите поддерживаемые игровые данные из Prism Launcher, MultiMC, Modrinth или TL в отдельную сборку. Сначала проверьте состав и объём; исходная установка останется на месте.</p><p class="muted" data-text="migrationLimits">Закройте исходную игру перед переносом. Аккаунты, токены и команды запуска не копируются. Для Prism/MultiMC распознаются версия Minecraft и загрузчик; файлы Minecraft и Java подготавливаются при запуске.</p><div class="actions"><a href="/help/migration-prism/">Prism / MultiMC →</a><a href="/help/migration-modrinth/">Modrinth →</a><a href="/help/migration-tl/">TL →</a><a href="/help/archive-import/">ZIP / MRPACK →</a></div></div><div class="transfer-scene" aria-label="Схема переноса сборки" data-motion-label="transferLabel">
+  <div class="source-packs"><div class="pack-source"><span class="source-mark">P</span>Prism / MultiMC<span>↗</span></div><div class="pack-source"><span class="source-mark">M</span>Modrinth<span>↗</span></div><div class="pack-source"><span class="source-mark">TL</span>TL<span>↗</span></div><div class="pack-source"><span class="source-mark">ZIP</span>ZIP / MRPACK<span>↗</span></div></div>
+  <div class="transfer-path" aria-hidden="true"><i></i><i></i><i></i><span>→</span></div>
+  <div class="destination-pack"><svg aria-hidden="true" focusable="false" width="54" height="54" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Minerva cube</title><polygon id="left" fill="#00bd78" points="62.01031,176 138.220545,220 138.220545,412 62.01031,368"/><polygon id="center" fill="#087452" points="190.182069,200 280.248711,252 280.248711,466 190.182069,414"/><polygon id="right" fill="#064936" points="449.98969,176 346.066642,236 346.066642,428 449.98969,368"/><polygon id="chevron" fill="#00c982" points="110.507732,126 256,210 401.492268,126 449.98969,154 256,266 62.01031,154"/><polygon id="cap-edge" fill="#087452" points="380.707658,114 256,186 256,191 380.707658,119"/><polygon id="cap" fill="#00c982" points="256,42 380.707658,114 256,186 131.292342,114"/></svg><strong>Minerva</strong><span data-motion-text="separateCopy">Отдельная копия</span><small data-motion-text="sourceSafe">Оригинал остаётся на месте</small></div>
+</div></section>
+    <section class="band editorial cloud-section"><div><p class="eyebrow" data-text="cloudLabel">СОХРАНИТЬ И ПОДЕЛИТЬСЯ</p><h2 data-text="cloudTitle">Состав сборки — под рукой.</h2><p data-text="cloudCopy">Два бесплатных облачных слота, обновляемые сохранения и до пяти отзываемых ссылок на сборку. Каждая ссылка хранит снимок своей ревизии. Бинды сохраняются отдельно — до десяти наборов.</p><p class="muted" data-text="cloudLimits">Манифест .minerva хранит доступные каталожные файлы по версиям и хешам. Миры, приватные конфиги и бинарники в него не входят. Для них нужен локальный ZIP-бэкап.</p><div class="actions"><a href="/help/cloud-save/" data-text="cloudGuide">Облачные сохранения →</a><a href="/help/backups/" data-text="backupGuide">Резервные копии →</a><a href="/help/keybinds/" data-text="bindGuide">Бинды →</a></div></div><div class="cloud-visual" aria-hidden="true"><div class="cloud-line"></div><div class="cloud-file file-back"><span>.minerva</span><i></i><i></i><i></i></div><div class="cloud-file file-front"><span class="file-dot"></span><strong>your-world.minerva</strong><div class="file-row">VERSIONS <span>✓</span></div><div class="file-row">HASHES <span>✓</span></div><div class="file-row">CATALOG CONTENT <span>✓</span></div><div class="file-foot">SAVE. SHARE. RESTORE.</div></div></div></section>
+    <section class="band editorial restore-section"><div><p class="eyebrow" data-text="restoreLabel">КОНТРОЛЬ УСТАНОВКИ</p><h2 data-text="restoreTitle">Понятно, что уже установлено.</h2><p data-text="restoreCopy">Выбирайте компоненты и целевую сборку, следите за файлами, повторяйте неудачные загрузки. Незавершённый импорт манифеста продолжается в ту же цель. Пропуск обязательного файла оставляет установку незавершённой.</p><div class="actions"><a href="/help/cloud-restore/" data-text="restoreGuide">Установка манифеста →</a><a href="/help/resume/" data-text="resumeGuide">Если пропал интернет →</a></div></div></section>
+<section class="band editorial restore-section shared-section"><div><p class="eyebrow" data-text="sharedLabel">ОДНА БИБЛИОТЕКА ДЛЯ СБОРОК</p><h2 data-text="sharedTitle">Общие папки. Независимые копии.</h2><p data-text="sharedCopy">Подключайте схематики, эмоции, звуки, скриншоты и разрешённые папки к общей библиотеке. Клонируйте только контент или всю сборку с мирами и настройками — копия будет независимой.</p><p class="muted" data-text="sharedLimits">Исходные локальные данные сохраняются отдельно. Общий мир открывайте только в одной игре одновременно. Полное клонирование и ZIP-экспорт включают независимые копии общих данных.</p><div class="actions"><a href="/help/shared-folders/" data-text="sharedGuide">Общие папки →</a><a href="/help/clone-instance/" data-text="cloneGuide">Клонирование →</a></div></div></section>
+<section class="band editorial restore-section appearance-section"><div><p class="eyebrow" data-text="skinLabel">ВАШ ОБРАЗ В ИГРЕ</p><h2 data-text="skinTitle">Скины, плащи и значки Minerva.</h2><p data-text="skinCopy">Управляйте официальными скинами и плащами Microsoft, локальной библиотекой и отдельным обликом Minerva. Компонент доступен для Fabric 1.21.1, 1.21.4, 1.21.10, 1.21.11, 26.2 и 26.3.</p><p class="muted" data-text="skinLimits">Для применения HD-скинов Minerva нужны Premium и вход в Minerva. Смотреть такие скины могут все пользователи компонента. Это отдельное переопределение: официальный скин Microsoft не заменяется.</p><div class="actions"><a href="/help/appearance/" data-text="skinGuide">Настроить внешний вид →</a></div></div></section>
+    <section class="band faq-section" id="faq"><h2 data-text="faq">Коротко о главном</h2><details><summary data-text="faq1">Нужен ли аккаунт Minerva для игры?</summary><p data-text="faq1a">Игровой профиль и аккаунт Minerva — разные вещи. Minerva нужен для личного облака и биндов; Microsoft-вход и право на игру проверяются отдельно.</p></details><details><summary data-text="faq2">Облачная сборка — полный бэкап?</summary><p data-text="faq2a">Нет. Это манифест доступного контента. Миры и личные файлы сохраняйте отдельно в проверенный ZIP.</p></details><details><summary data-text="faq3">Можно ли играть без сети?</summary><p data-text="faq3a">Режим локальных файлов требует заранее подготовленного Minecraft, Java и библиотек. Он не отменяет требования Microsoft и не открывает облако без сети.</p></details><a href="/help/" data-text="allGuides">Вся справка →</a></section>
+    <section class="band changelog-section" id="changelog"><h2 data-text="changelog">История обновлений</h2><div id="release-history"></div><a href="https://github.com/GrizzlyDeveloper/Minerva-Releases" data-text="archive">Архив релизов</a></section>
+    <section class="band download" id="download" aria-labelledby="download-title">
+      <div><p class="eyebrow">WINDOWS · X64</p><h2 id="download-title" data-text="downloadHeading">Скачать Minerva</h2><p data-text="signed">Подпись обновлений проверяется лаунчером.</p><p class="muted" data-text="warning">Установщик пока без подписи Windows Authenticode. SmartScreen может показать предупреждение.</p></div>
+      <div class="release">
+        <p id="release-status" role="status" data-text="loading">Проверяем опубликованный релиз…</p>
+        <a id="installer" class="primary" hidden data-text="downloadWindows">Скачать для Windows</a>
+        <dl id="release-details" hidden><dt data-text="version">Версия</dt><dd id="release-version"></dd><dt data-text="size">Размер</dt><dd id="release-size"></dd><dt data-text="date">Дата</dt><dd id="release-date"></dd><dt>SHA-256</dt><dd><span id="release-sha" class="checksum"></span> <button id="copy-sha" type="button" data-text="copy">Копировать</button><span id="copy-status" role="status"></span></dd></dl>
+        <a id="signature" hidden data-text="signature">Подпись установщика</a>
+        <p id="release-notes" class="notes" hidden></p>
+        <button id="retry" type="button" hidden data-text="retry">Повторить</button>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="/"><svg aria-hidden="true" focusable="false" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Minerva cube</title><polygon id="left" fill="#00bd78" points="62.01031,176 138.220545,220 138.220545,412 62.01031,368"/><polygon id="center" fill="#087452" points="190.182069,200 280.248711,252 280.248711,466 190.182069,414"/><polygon id="right" fill="#064936" points="449.98969,176 346.066642,236 346.066642,428 449.98969,368"/><polygon id="chevron" fill="#00c982" points="110.507732,126 256,210 401.492268,126 449.98969,154 256,266 62.01031,154"/><polygon id="cap-edge" fill="#087452" points="380.707658,114 256,186 256,191 380.707658,119"/><polygon id="cap" fill="#00c982" points="256,42 380.707658,114 256,186 131.292342,114"/></svg>MINERVA</a><div><a href="/help/" data-text="guides">Гайды</a><a href="/account/" data-text="account">Личный кабинет</a><a href="/privacy.html" data-text="privacy">Конфиденциальность</a><a href="/terms.html" data-text="terms">Условия</a></div><p data-text="independent">Независимый проект. Не связан с Mojang или Microsoft.</p></footer>
+  <link rel="stylesheet" href="/support.css?v=layout-20261018"><script type="module" src="/support.js?v=layout-20261018"></script>
+</body>
 </html>
