@@ -14,3 +14,5 @@ body>header{position:sticky;top:0;z-index:500;display:flex;align-items:center;ga
 .cloud-line{inset:55px 40px 30px}
 @media(max-width:580px){.transfer-scene{margin:0}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.scene-depth{transform:none!important}.features article:hover,.primary:hover{transform:none}}
+
+@media(max-width:580px){body>header>nav{flex-wrap:wrap;justify-content:flex-start;gap:10px 16px}}

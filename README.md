@@ -1,5 +1,15 @@
 # Minerva Website
 
+## Browser skins and owner navigation — 2026-10-19
+
+`/account/skins` opens the browser skin editor. The published account assets are
+in `account/`; source/backend changes are in the private launcher branch
+`codex/web-skins-owner-panel-20261019`. The editor supports a per-account local
+PNG library, 3D model/layer preview, nickname-based Minerva assignments, revision
+checks and Premium HD limits. Official Microsoft appearance is managed through
+the launcher or the official Minecraft profile. Teams/Maps are owner-panel
+subpages; ordinary accounts neither display them nor load their sidebar data.
+
 ## Homepage refresh — 2026-10-19
 
 The approved motion design is now the main homepage (`index.html`, `home.css`,
