@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grizzlydeveloper.github.io/minerva-website/sitemap.xml
+Disallow: /account/
+Disallow: /updates/
+Disallow: /downloads/
+Sitemap: https://minervalauncher.com/sitemap.xml
