@@ -1,3 +1,4 @@
+import {applyRelease044} from './help-release-0.4.44.mjs';
 // Editorial source. Steps audited against Minerva 0.4.28 source on 2026-10-15;
 // this is not a claim of runtime acceptance of every launcher/source combination.
 const articles=[];
@@ -95,6 +96,8 @@ add("appearance","profiles","скины|плащи|HD|Premium|appearance|skin|ca
 for(const a of articles.filter(a=>a.slug==="appearance")){a.minLauncherVersion="0.4.34";a.verifiedAt='2026-10-19';}
 for(const a of articles.filter(a=>a.slug==='profile-switch')){a.requirements=a.requirements.replace('Fabric 1.21.1 и 1.21.11','Fabric 1.21.1, 1.21.11, 26.2 и 26.3').replace('Fabric 1.21.1 and 1.21.11','Fabric 1.21.1, 1.21.11, 26.2 and 26.3');a.minLauncherVersion='0.4.33';a.verifiedAt='2026-10-19';}
 
+applyRelease044(articles);
 const related={install:['first-steps','updates'], 'migration-modrinth':['migration-tl','backups','startup-errors'],'cloud-save':['manifest','share','cloud-restore'],keybinds:['instance-settings','backups'],repair:['install-content','startup-errors'],resume:['cloud-restore','missing-files'],'warm-return':['profile-switch','offline']};
+Object.assign(related,{'schematic-catalog':['install-content','multiple-sessions'],'multiple-sessions':['warm-return','profile-switch'],'mod-update-dependencies':['install-content','startup-errors']});
 for(const a of articles) a.related=related[a.slug] || [a.slug==='first-steps'?'install':'first-steps',a.slug==='contact'?'startup-errors':'contact'];
 export default articles;
