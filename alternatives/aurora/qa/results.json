@@ -1,0 +1,43 @@
+[
+  {
+    "name": "desktop",
+    "ru_en": true,
+    "no_overflow": true,
+    "no_page_errors": true,
+    "no_failed_resources": true,
+    "language_persisted": true,
+    "anchor_navigation": true
+  },
+  {
+    "name": "tablet",
+    "ru_en": true,
+    "no_overflow": true,
+    "no_page_errors": true,
+    "no_failed_resources": true,
+    "language_persisted": true,
+    "anchor_navigation": true
+  },
+  {
+    "name": "mobile",
+    "ru_en": true,
+    "no_overflow": true,
+    "no_page_errors": true,
+    "no_failed_resources": true,
+    "language_persisted": true,
+    "anchor_navigation": true
+  },
+  {
+    "name": "small",
+    "ru_en": true,
+    "no_overflow": true,
+    "no_page_errors": true,
+    "no_failed_resources": true,
+    "language_persisted": true,
+    "anchor_navigation": true
+  },
+  {
+    "reduced_motion": true,
+    "faq": true,
+    "support_dialog": true
+  }
+]

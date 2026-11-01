@@ -3,6 +3,9 @@ Object.assign(en,{"profilesCopy": "Microsoft and local profiles. In-game switchi
 en.skins='Skins';
 const ru={loading:'Проверяем опубликованный релиз…',unavailable:'Здесь пока нет опубликованного релиза.',failed:'Сервер релизов недоступен. Повторите попытку.',sourceNotes:'Исходные заметки релиза (английский):',copied:' Скопировано',copyFailed:' Выделите и скопируйте хеш вручную.'};
 // Editorial notes are keyed to real releases and never reused for unknown versions.
+
+Object.assign(en,{warmCopy:'Keep a supported Fabric client ready in memory. Enabled by default for new supported instances; saved choices are preserved. Additional games launch normally while standby is occupied.',modsCopy:'Mods, resource packs and shaders with dependency checks. The Minerva schematic catalog saves builds into a shared local library.'});
+Object.assign(ru,{warmCopy:'Сохраните поддерживаемый Fabric-клиент готовым в памяти. В новых совместимых сборках включено по умолчанию; сохранённые настройки не меняются. Дополнительные окна запускаются обычно.',modsCopy:'Моды, ресурспаки и шейдеры с проверкой зависимостей. Каталог схематик Minerva сохраняет постройки в общую локальную библиотеку.'});
 const notes={
  "0.4.27": {
   "ru": "Исправлена повторная установка модов после ручного удаления файлов. Проверки совместимости и зависимостей сохранены.",
@@ -32,9 +35,53 @@ const notes={
   "ru": "Независимое клонирование сборок, переключение игровых профилей на Fabric 26.2/26.3 и компонент скинов и значков для шести версий Fabric. Warm Return остаётся отдельной опцией для 1.21.1 и 1.21.11.",
   "en": "Independent instance cloning, in-game profile switching on Fabric 26.2/26.3 and the skins/badges component for six Fabric versions. Warm Return remains a separate option for 1.21.1 and 1.21.11."
  },
+ "0.4.35": {
+  "ru": "Локальные серверы и импорт серверных ZIP, установка модпаков и датапаков в новые серверы, популярный контент и фильтры. Обновлённый список установленного контента, единый тёмный скролл и синхронизация игровых профилей с редактором скинов на сайте.",
+  "en": "Local servers and server ZIP import, modpacks and datapacks installed into new servers, popular content and filters. Refreshed installed-content list, consistent dark scrollbars and game-profile synchronization with the website skin editor."
+ },
  "0.4.34": {
   "ru": "Общие папки между сборками с сохранением локальных данных и независимым клонированием. Резервное скачивание обновлений с GitHub с обязательной проверкой подписи. Улучшения входа в Minerva и сообщений о скинах.",
   "en": "Shared folders with preserved local data and independent cloning. GitHub update-download fallback with mandatory signature verification. Clearer Minerva sign-in and skin status."
+ },
+ "0.4.36": {
+  "ru": "Добавлен доступ друзей к локальному Minecraft-серверу через playit. Нужен отдельный аккаунт playit; действуют его ограничения на агентов и порты. Компьютер с сервером и лаунчер должны оставаться включёнными. Повторное подключение использует сохранённого агента и туннель. Сброс ключа вынесен в отдельный раздел с предупреждением о создании нового агента.",
+  "en": "Added friend access to local Minecraft servers through playit. A separate playit account is required; its agent and port limits apply. The host PC and Minerva must stay on. Reconnecting reuses the saved agent and tunnel. Credential reset is now separate and explicitly warns that reconnecting afterward creates a new agent."
+ },
+ "0.4.37": {
+  "ru": "Исправлен автоматический переход на зеркало GitHub, если основной источник обновления зависает или обрывает передачу файла. Исправлен переход ко второму источнику, если зависла загрузка данных о новой версии. Подпись установщика и выбранная версия по-прежнему проверяются.",
+  "en": "Fixed automatic GitHub mirror failover when the primary update source stalls or interrupts an installer transfer. Fixed switching to the second update feed when release metadata stops downloading. Installer signatures and the selected version are still verified."
+ },
+ "0.4.38": {
+  "ru": "Исправлена передача официальных JVM-параметров Minecraft при запуске сборок. Для 26.3 автоматически применяется StackShadowPages=32; вручную вводить его не нужно. Исправление проверено пользователем с включённым CustomTotem. В проверке совместимости появилась кнопка смены версии Fabric рядом с отключением несовместимого мода.",
+  "en": "Fixed inheritance of official Minecraft JVM arguments for game instances. Minecraft 26.3 receives StackShadowPages=32 automatically, without manual JVM configuration. The owner verified the fix with CustomTotem enabled. Added a Fabric-version action alongside disabling an incompatible mod."
+ },
+ "0.4.39": {
+  "ru": "Исправлена проверка обновлений в канале Preview при недоступном сайте. Теперь после ошибки сайта лаунчер проверяет Preview-feed на GitHub, затем стабильный GitHub-feed, если первый тоже недоступен. Резервное скачивание стабильного установщика с GitHub работает и для Preview.",
+  "en": "Fixed Preview update checks when the website is unavailable. After a website error, Minerva checks the GitHub Preview feed, then the stable GitHub feed if the Preview feed is unavailable too. Pinned GitHub download fallback for stable installers now also works in Preview."
+ },
+ "0.4.40": {
+  "ru": "Общая локальная библиотека схематик для выбранных сборок. Подключение общей папки настраивается отдельно; перенос существующих файлов требует подтверждения. Импорт нескольких файлов и папок, поиск и фильтры, создание и переименование папок, пакетное перемещение, переименование и удаление схематик. При перемещении можно создать папку назначения. Выбор сохранить/заменить появляется только при конфликте имён; уникальные файлы импортируются без лишнего диалога.",
+  "en": "Shared local schematic library for selected instances. Shared-folder bindings are configurable; copying existing local files requires confirmation. Import multiple files and folders, search/filter, organize folders, batch move, rename and delete schematics. Create a destination folder while moving files. Conflict choices appear only for existing names, not ordinary unique imports."
+ },
+ "0.4.41": {
+  "ru": "Галерея скриншотов всех сборок: вложенные папки, группировка по дням, поиск, фильтры дат и сортировка. Просмотр с масштабированием и клавиатурой, копирование изображения, сохранение, открытие папки и удаление в корзину. Локальные резервные копии в настройках: выбор сборки и папок, рекомендуемый набор, создание ZIP с прогрессом, список копий и цветная индикация размеров. Занятые миры не копируются; восстановление доступно через импорт ZIP в новую сборку. Облачные и автоматические копии в эту версию не входят.",
+  "en": "Screenshot gallery across instances: nested folders, day grouping, search, date filters and sorting. Viewer with zoom and keyboard navigation, image clipboard, Save As, folder reveal and recycle-bin deletion. Local backups in Settings: choose an instance and folders, recommended set, ZIP creation progress, backup inventory and colour-coded archive sizes. Locked worlds are refused; recover by importing the ZIP into a new instance. Cloud backups and automatic backup schedules are not included."
+ },
+ "0.4.42": {
+  "ru": "Свои плащи во «Внешнем виде»: PNG, JPG и анимированные GIF, предпросмотр, настройка масштаба, положения и качества. Прозрачность PNG сохраняется. Локальная библиотека до 100 плащей; применение только для себя бесплатно. Premium позволяет опубликовать выбранный плащ для других игроков Minerva. На сервер отправляется один выбранный плащ, локальная библиотека остаётся на компьютере. Поддерживаются Fabric 1.21.1, 1.21.4, 1.21.10, 1.21.11, 26.2 и 26.3. Передача GIF сжимается без снижения разрешения и удаления кадров.",
+  "en": "Custom capes in Appearance: PNG, JPG and animated GIF, live preview, scale, placement and quality controls. PNG transparency is preserved. Keep up to 100 capes locally; applying a cape for yourself is free. Premium can publish the selected cape for other Minerva players. Only one selected cape is uploaded; the local library stays on your computer. Supported Fabric versions: 1.21.1, 1.21.4, 1.21.10, 1.21.11, 26.2 and 26.3. GIF transfer is compressed without reducing resolution or discarding frames."
+ },
+ "0.4.43": {
+  "ru": "Warm Return теперь поддерживает все версии Fabric с компонентом Minerva: 1.21.1, 1.21.4, 1.21.10, 1.21.11, 26.2 и 26.3. Minecraft можно оставить готовым в памяти из главного меню и быстро открыть снова из лаунчера. В новых совместимых сборках Warm Return включён по умолчанию. Сохранённые настройки существующих сборок не меняются; опцию можно отключить в настройках сборки. Игра продолжает использовать память, обычный выход закрывает её полностью.",
+  "en": "Warm Return now supports every Fabric version with the Minerva component: 1.21.1, 1.21.4, 1.21.10, 1.21.11, 26.2 and 26.3. Keep Minecraft ready in memory from the main menu and reopen it from the launcher. Enabled by default for new supported instances. Existing saved preferences are preserved; disable it in instance settings if desired. Minecraft continues to use memory; normal Exit closes it completely."
+ },
+ "0.4.44": {
+  "ru": "Каталог схематик Minerva: поиск по собственной коллекции, фильтры, сведения об авторе и источнике, скачивание после входа и установка в общую библиотеку. Подключённые сборки используют сохранённый файл. Превью подготавливаются на сервере; у недоступных изображений остаётся заглушка. Исправлены дополнительные запуски при включённом Warm Return: пока слот ожидания занят, другие окна запускаются обычно без изменения настроек сборки. Для одновременной игры с Voxy нужны отдельные копии сборки: его база мира не допускает двух клиентов из одной папки. Minerva сообщает об этом до запуска и распознаёт соответствующую ошибку RocksDB в отчёте о сбое.",
+  "en": "Minerva schematic catalog: search the self-hosted collection, filter results, view attribution, download after signing in and install into the shared library. Connected instances use the saved file. Previews are prepared on the server; unavailable images retain a placeholder. Additional games can start with Warm Return enabled: while standby is occupied, extra windows launch normally without changing saved preferences. Simultaneous games with Voxy require separate instance copies because its world database cannot be shared by two clients in one folder. Minerva explains this before launch and recognizes the corresponding RocksDB crash."
+ },
+ "0.4.45": {
+  "ru": "Каталог схематик получил 12 понятных тематических категорий вместо исходных названий категорий сайтов. Фильтр и подписи переведены на русский и английский; схематика может находиться в нескольких разделах, например в фермах и редстоуне. Исходные теги Abfielder сохранены как ключевые слова поиска: 170 меток в отдельном словаре, связи с карточками и вложениями без дубликатов. Стиль, название проекта и формат файла не подменяют тематическую категорию.",
+  "en": "The schematic catalog now has 12 clear theme categories instead of raw website categories. Filters and labels support Russian and English. A schematic may appear in multiple themes, such as farms and redstone. Original Abfielder tags remain searchable keywords: 170 source labels with separate, deduplicated item and attachment relationships. Styles, project names and file formats are not substituted for theme categories."
  }
 };
 const originals=new Map([...document.querySelectorAll('[data-text]')].map(e=>[e,e.textContent]));
@@ -53,7 +100,7 @@ function applyLanguage(){
  document.querySelector('#release-status').textContent=text(status);
  document.querySelector('#copy-status').textContent='';
  const history=document.querySelector('#release-history');history.replaceChildren();
- for(const [version,value]of Object.entries(notes).slice(-4).reverse()){
+ for(const [version,value]of Object.entries(notes).sort(([a],[b])=>{const av=a.split('.').map(Number),bv=b.split('.').map(Number);return bv[0]-av[0]||bv[1]-av[1]||bv[2]-av[2];}).slice(0,4)){
   const article=document.createElement('article'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=version;p.textContent=value[language];article.append(h,p);history.append(article);
  }
  if(releaseValue){

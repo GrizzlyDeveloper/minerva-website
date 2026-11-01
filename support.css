@@ -5,3 +5,9 @@
 .support-widget,body:has(.shell) .support-widget{left:auto;right:max(16px,env(safe-area-inset-right))}
 .support-dialog,body:has(.shell) .support-dialog{left:auto;right:max(16px,env(safe-area-inset-right))}
 @media(max-width:600px){.support-widget,body:has(.shell) .support-widget{right:max(12px,env(safe-area-inset-right))}.support-dialog,body:has(.shell) .support-dialog{left:16px;right:16px}}
+.support-widget>#support-launcher{width:52px;height:52px;min-height:52px;padding:0;border-radius:50%;display:grid;place-items:center}.support-widget>#support-launcher svg{display:block;pointer-events:none}
+.support-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
+.support-overview article{padding:22px;border:1px solid #34363c;border-radius:12px;background:#18191c;display:grid;gap:16px}
+.support-overview span{color:#afb3bc;font-size:14px}.support-overview strong{font-size:34px;line-height:1.15;color:#52df95;font-variant-numeric:tabular-nums}
+.support-kit details{margin:18px 0}.support-kit summary{cursor:pointer;padding:8px 0}
+@media(max-width:650px){.support-overview{grid-template-columns:1fr}.support-overview article{padding:18px}}
