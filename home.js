@@ -86,6 +86,10 @@ const notes={
  "0.4.46": {
   "ru": "Исправлено исчезновение элитр при использовании своего плаща Minerva: рисунок плаща больше не подставляется на крылья. Сохраняется исходная текстура элитр или оригинального плаща; при её отсутствии используются стандартные элитры. Исправление включено для компонентов Fabric 1.21.1, 1.21.4, 1.21.10, 1.21.11, 26.2 и 26.3. После обновления полностью закройте и заново запустите Minecraft, чтобы загрузить обновлённый компонент.",
   "en": "Fixed elytra disappearing when a custom Minerva cape is equipped. Cape artwork is no longer reused for wings. The original elytra or original cape texture is preserved; players without either use the default elytra texture. Included for Fabric components on 1.21.1, 1.21.4, 1.21.10, 1.21.11, 26.2 and 26.3. Fully close and relaunch Minecraft after updating to load the new component."
+ },
+ "0.4.47": {
+  "ru": "Новое оформление Studio и выбор тёмной или светлой темы в «Настройки → Интерфейс». Классическое оформление остаётся доступным; выбор сохраняется без изменения сборок и игровых профилей. Обновлены кнопки и вкладки: объёмные состояния, индикатор загрузки, управление вкладками стрелками и Home/End. Добавлены фон с короткими лучами по контурам логотипа Minerva, плавный живой фон и однотонный вариант.",
+  "en": "New Studio styling and a dark/light colour theme in Settings → Interface. Classic styling remains available; visual preferences persist without changing instances or game profiles. Refined buttons and tabs with raised states, loading indicators and Arrow/Home/End keyboard navigation. Background choices include finite Minerva logo light trails, a slow ambient composition and a solid canvas."
  }
 };
 const originals=new Map([...document.querySelectorAll('[data-text]')].map(e=>[e,e.textContent]));

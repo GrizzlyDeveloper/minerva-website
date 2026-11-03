@@ -1,3 +1,4 @@
+import {applyRelease047} from './help-release-0.4.47.mjs';
 import {applyRelease044} from './help-release-0.4.44.mjs';
 import {applyRelease045} from './help-release-0.4.45.mjs';
 import {applyRelease046} from './help-release-0.4.46.mjs';
@@ -104,4 +105,5 @@ applyRelease046(articles);
 const related={install:['first-steps','updates'], 'migration-modrinth':['migration-tl','backups','startup-errors'],'cloud-save':['manifest','share','cloud-restore'],keybinds:['instance-settings','backups'],repair:['install-content','startup-errors'],resume:['cloud-restore','missing-files'],'warm-return':['profile-switch','offline']};
 Object.assign(related,{'schematic-catalog':['install-content','multiple-sessions'],'multiple-sessions':['warm-return','profile-switch'],'mod-update-dependencies':['install-content','startup-errors']});
 for(const a of articles) a.related=related[a.slug] || [a.slug==='first-steps'?'install':'first-steps',a.slug==='contact'?'startup-errors':'contact'];
+applyRelease047(articles);
 export default articles;
