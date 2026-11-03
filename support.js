@@ -96,12 +96,14 @@ export function mountAdmin(root,locale=lang()){
   const currentParams=()=>{const p=params();p.delete('offset');return p.toString();};let displayedParams='';
   async function load(){if(busy||disposed)return;busy=true;submit.disabled=true;csv.disabled=true;status.textContent=t.loading;last=null;results.replaceChildren();try{
    const data=await client.raw('/owner/statistics?'+params());if(disposed||!results.isConnected)return;if(!data.complete||data.timeZone!=='UTC'){status.textContent=t.partial;return;}last=data;displayedParams=currentParams();status.textContent=data.total?'':t.noData;csv.disabled=false;
-   const totals=node('dl',undefined,{class:'support-totals'});for(const event of events)totals.append(node('dt',t[event]),node('dd',String(data.totals[event])));results.append(totals);
+   if(data.overview){const overview=node('div',undefined,{class:'support-overview'});for(const [key,title]of [['siteViews',locale==='ru'?'Просмотры сайта':'Website page views'],['websiteDownloads',locale==='ru'?'Скачивания с сайта':'Website downloads'],['updaterDownloads',locale==='ru'?'Загрузки обновлений':'Update downloads']]){const card=node('article');card.append(node('span',title),node('strong',String(data.overview[key]||0)));overview.append(card);}const definitions=node('details');definitions.append(node('summary',locale==='ru'?'Как считаются показатели':'How metrics are counted'),node('p',locale==='ru'?'Сводка за выбранные даты, по всем версиям. Просмотры — запросы HTML публичного сайта, не уникальные люди. Повторы и боты возможны. Скачивания — начатые передачи с нашего сервера, включая повторные попытки; GitHub сюда не входит. Загрузка обновления не подтверждает его установку. Новая метрика просмотров собирается после развёртывания.':'Overview for the selected dates across all releases. Page views count public HTML requests, not unique people; reloads and bots may be included. Downloads count transfers started on our server, including retries; GitHub is excluded. An update download does not confirm installation. Page-view measurement starts after deployment.',{class:'support-note'}));results.append(overview,definitions);}
+   const advanced=node('details'),advancedTitle=node('summary',locale==='ru'?'Технические счётчики':'Technical counters'),totals=node('dl',undefined,{class:'support-totals'});for(const event of events)totals.append(node('dt',t[event]),node('dd',String(data.totals[event])));advanced.append(advancedTitle,totals);results.append(advanced);
    // Accessible SVG line chart, with exact values available in the table below.
    const chart=node('div',undefined,{class:'support-chart'}),ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 760 220');svg.setAttribute('role','img');svg.setAttribute('aria-label',t.full_transfers_completed+' / '+t.ranges_completed+' · UTC');
    const max=Math.max(1,...data.daily.flatMap(d=>[d.full_transfers_completed,d.ranges_completed]));
    for(const [index,event]of ['full_transfers_completed','ranges_completed'].entries()){const line=document.createElementNS(ns,'polyline');line.setAttribute('points',data.daily.map((d,i)=>`${20+i*720/Math.max(1,data.daily.length-1)},${200-d[event]*180/max}`).join(' '));line.setAttribute('class',index?'ranges':'full');svg.append(line);}chart.append(svg,node('p',`${data.from} → ${data.to} · UTC · 0–${max}`),node('p',t.full_transfers_completed+' — '+(locale==='ru'?'зелёный':'green')+' · '+t.ranges_completed+' — '+(locale==='ru'?'синий':'blue')));results.append(chart);
    const table=node('table'),head=node('tr');for(const title of [t.date,t.release,t.channel,t.source,...events.map(e=>t[e])])head.append(node('th',title));const thead=node('thead');thead.append(head);table.append(thead);const tbody=node('tbody');for(const row of data.rows){const tr=node('tr');for(const key of ['day','version','channel','source',...events])tr.append(node('td',String(row[key])));tbody.append(tr);}table.append(tbody);const wrap=node('div',undefined,{class:'support-table'});wrap.append(table);results.append(wrap);const prev=button(t.previous,()=>{offset=Math.max(0,offset-50);void load();}),next=button(t.next,()=>{offset+=50;void load();});prev.disabled=offset===0;next.disabled=offset+50>=data.total;results.append(prev,node('span',` ${offset+Math.min(1,data.total)}–${Math.min(offset+50,data.total)} / ${data.total} `),next);
+   while(advanced.nextSibling)advanced.append(advanced.nextSibling);
   }catch(e){status.textContent=e.status===400?t.range:t.unavailable;}finally{busy=false;submit.disabled=false;}}
   async function exporting(){if(busy||!last||displayedParams!==currentParams())return;busy=true;csv.disabled=true;try{const p=params();p.set('export','1');const data=await client.raw('/owner/statistics?'+p);if(!data.complete||data.rows.length!==data.total)throw new Error();const keys=['day','version','channel','source',...events];const cell=v=>'"'+String(v).replace(/^[=+@\-\t\r]/,"'"+'$&').replace(/"/g,'""')+'"';const csvText='\uFEFF'+[keys,...data.rows.map(r=>keys.map(k=>r[k]))].map(row=>row.map(cell).join(',')).join('\r\n');const url=URL.createObjectURL(new Blob([csvText],{type:'text/csv;charset=utf-8'})),a=node('a',undefined,{href:url,download:'minerva-transfers-utc.csv'});a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch{status.textContent=t.unavailable;}finally{busy=false;csv.disabled=false;}}
   form.addEventListener('submit',e=>{e.preventDefault();offset=0;void load();});form.addEventListener('input',()=>{csv.disabled=true;});void load();
@@ -110,18 +112,33 @@ export function mountAdmin(root,locale=lang()){
  return ()=>{disposed=true;cleanup?.();};
 }
 
+function upgradeLauncherIcon(open){
+ if(open.dataset.minervaIcon==='true')return;
+ open.dataset.minervaIcon='true';
+ const update=()=>{
+  open.setAttribute('aria-label',messages[lang()].ask);open.title=messages[lang()].ask;
+  if(open.querySelector('svg[data-support-icon]'))return;
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),path=document.createElementNS(svg.namespaceURI,'path');
+  for(const [key,value]of Object.entries({viewBox:'0 0 24 24',width:'24',height:'24',fill:'none',stroke:'currentColor','stroke-width':'2','stroke-linecap':'round','stroke-linejoin':'round','aria-hidden':'true','data-support-icon':'true'}))svg.setAttribute(key,value);
+  // Lucide MessageCircle, lucide-react 1.47.0 (ISC).
+  path.setAttribute('d','M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719');svg.append(path);open.replaceChildren(svg);
+ };
+ update();new MutationObserver(update).observe(open,{childList:true});new MutationObserver(update).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+}
 function installWidget(){
- if(document.getElementById('support-launcher'))return;
+ const existing=document.getElementById('support-launcher');if(existing){upgradeLauncherIcon(existing);return;}
  const header=document.querySelector('body > header');
  if(header){
   const measure=()=>document.documentElement.style.setProperty('--site-header-height',`${header.getBoundingClientRect().height}px`);
   measure();new ResizeObserver(measure).observe(header);
  }
- const root=node('div',undefined,{class:'support-kit support-widget'}),open=button(messages[lang()].ask,show,{id:'support-launcher','aria-haspopup':'dialog'}),dialog=node('dialog',undefined,{class:'support-kit support-dialog','aria-labelledby':'support-dialog-title'});root.append(open,dialog);document.body.append(root);let cleanup,returnFocus;
+ const root=node('div',undefined,{class:'support-kit support-widget'}),open=button('',show,{id:'support-launcher','aria-haspopup':'dialog','aria-label':messages[lang()].ask,title:messages[lang()].ask}),dialog=node('dialog',undefined,{class:'support-kit support-dialog','aria-labelledby':'support-dialog-title'});
+ upgradeLauncherIcon(open);
+ root.append(open,dialog);document.body.append(root);let cleanup,returnFocus;
  function show(){if(dialog.open)return;returnFocus=document.activeElement;dialog.replaceChildren();const locale=lang(),t=messages[locale],header=node('div',undefined,{class:'support-dialog-header'});header.append(node('h2',t.ask,{id:'support-dialog-title'}),button(t.close,()=>dialog.close(),{'aria-label':t.close}));const content=node('div');dialog.append(header,content);cleanup=mountCreate(content,locale);dialog.showModal();dialog.querySelector('input')?.focus();}
  dialog.addEventListener('close',()=>{cleanup?.();returnFocus?.focus();});
  // Native modal dialog provides Escape, focus containment and inert background.
- new MutationObserver(()=>{open.textContent=messages[lang()].ask;}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+ new MutationObserver(()=>{open.setAttribute('aria-label',messages[lang()].ask);open.title=messages[lang()].ask;}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
  const check=()=>{root.hidden=!!document.fullscreenElement||!!document.querySelector('[role="dialog"][aria-modal="true"]');};setInterval(check,1000);document.addEventListener('fullscreenchange',check);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installWidget,{once:true});else installWidget();
