@@ -116,7 +116,7 @@ const english = {
   "footer.terms": "Terms",
   "footer.disclaimer": "Not affiliated with Mojang Studios or Microsoft.",
   "legal.label": "LEGAL",
-  "legal.date": "Updated September 27, 2026",
+  "legal.date": "Updated October 15, 2026",
   "legal.contact": "Contact",
   "legal.contactCopy": "Questions may be directed to",
   "legal.contactLink": "Grizzly Dev on GitHub",
@@ -131,13 +131,13 @@ const english = {
     "This data is used only to authenticate the user, verify access to Minecraft: Java Edition, launch the game, manage local instances, resolve content, and diagnose failures requested by the user.",
   "privacy.storageTitle": "Storage and transmission",
   "privacy.storageCopy":
-    "Minerva does not operate its own account server. Application state and authentication data are stored on your device. Sign-in uses Microsoft, Xbox Live and Minecraft Services. The catalog uses Modrinth and CurseForge; CurseForge metadata requests pass through a Minerva service, and files are downloaded from authorized source URLs.",
+    "Game profiles and instance files are stored on your device. Licensed sign-in uses Microsoft and Minecraft services. The separate Minerva account, teams and shared maps are hosted at minervalauncher.com. A game profile's position is shared with the team only when its visibility is enabled. The catalog uses Modrinth and CurseForge; CurseForge metadata passes through a Minerva service.",
   "privacy.telemetryTitle": "Telemetry",
   "privacy.telemetryCopy":
-    "Minerva does not collect analytics, advertising identifiers, gameplay activity, or background telemetry. Local diagnostic logs are not uploaded automatically.",
+    "The download server stores daily aggregate update checks, started and completed transfers, aborted transfers and file bytes by version, channel and source, for up to 400 days. These counters contain no IP address, player name or UUID, cookies or persistent device identifier. They do not represent unique people or installations. External proxy logs may contain IP addresses according to their retention settings. Local diagnostic logs are not uploaded automatically.",
   "privacy.passwordTitle": "Passwords and ownership",
   "privacy.passwordCopy":
-    "Account passwords are entered only on Microsoft pages and are not available to Minerva. Separate local/offline profiles do not grant access to servers that require a license. Licensed profiles still require Microsoft authorization.",
+    "Microsoft passwords are entered only on Microsoft pages and are not available to Minerva. Separate local/offline profiles do not grant access to servers that require a license. Licensed profiles still require Microsoft authorization.",
   "privacy.devTitle": "Development status",
   "privacy.devCopy":
     "Minerva 0.4.22 is distributed as a public beta. The installer does not yet have a Windows digital signature.",
@@ -199,6 +199,14 @@ const localizedElements = [...document.querySelectorAll("[data-i18n]")];
 const russian = Object.fromEntries(
   localizedElements.map((element) => [element.dataset.i18n, element.innerHTML]),
 );
+Object.assign(english,{
+ "privacy.supportTitle":"Support requests and abuse prevention",
+ "privacy.supportCopy":"The service stores the subject, category, conversation text, language, supplied Minerva version, safe page path and message times. Signed-in requests are associated with an account; guest links are stored as hashes of their secrets. The service owner can read messages, which are not anonymous telemetry. Contacts, attachments and automatic screenshots are not collected. Email and Telegram are not connected.",
+ "privacy.retentionCopy":"Initial local policy: resolved and archived requests are retained for up to 180 days after last activity, spam for 30 days; open requests remain until resolution/deletion within the queue limit. Temporary hashed network rate-limit keys last up to an hour and retry keys last a day. Expiry is checked on writes and hourly. The operator can configure these periods. Request deletion through your conversation. Removal from older backups is not guaranteed and depends on backup rotation. These changes require agreement before publication.",
+ "privacy.devCopy":"Minerva is distributed as a public beta. The installer does not yet have Windows Authenticode signing.",
+ "terms.supportTitle":"Contacting the developer",
+ "terms.supportCopy":"Send only text you are entitled to share with the service owner. Exclude passwords, tokens, other people’s personal data and private links. Replies are available on the website, without a promise of immediate responses or external notifications. Guests must preserve their private tracking link; losing it means losing access. Spam may be restricted or deleted. Privacy describes retention and deletion requests."
+});
 const originalTitle = document.title;
 const originalDescription =
   document.querySelector('meta[name="description"]')?.content ?? "";

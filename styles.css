@@ -9,6 +9,23 @@
   font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   font-synthesis: none;
 }
+:root { color-scheme: dark; }
+* { scrollbar-width: thin; scrollbar-color: #52525b #111114; }
+@supports selector(::-webkit-scrollbar) {
+  * { scrollbar-width: auto; scrollbar-color: auto; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: #111114; }
+  ::-webkit-scrollbar-thumb { min-height: 32px; border: 2px solid #111114; border-radius: 6px; background: #52525b; }
+  ::-webkit-scrollbar-thumb:hover { background: #71717a; }
+  ::-webkit-scrollbar-thumb:active { background: #a1a1aa; }
+  ::-webkit-scrollbar-corner { background: #111114; }
+  ::-webkit-scrollbar-button { width: 0; height: 0; display: none; }
+}
+@media (forced-colors: active) {
+  * { scrollbar-color: auto; }
+  ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: Canvas; }
+  ::-webkit-scrollbar-thumb { background: ButtonText; border-color: Canvas; }
+}
 
 * { box-sizing: border-box; }
 html { background: var(--bg); scroll-behavior: smooth; }
