@@ -90,6 +90,14 @@ const notes={
  "0.4.47": {
   "ru": "Новое оформление Studio и выбор тёмной или светлой темы в «Настройки → Интерфейс». Классическое оформление остаётся доступным; выбор сохраняется без изменения сборок и игровых профилей. Обновлены кнопки и вкладки: объёмные состояния, индикатор загрузки, управление вкладками стрелками и Home/End. Добавлены фон с короткими лучами по контурам логотипа Minerva, плавный живой фон и однотонный вариант.",
   "en": "New Studio styling and a dark/light colour theme in Settings → Interface. Classic styling remains available; visual preferences persist without changing instances or game profiles. Refined buttons and tabs with raised states, loading indicators and Arrow/Home/End keyboard navigation. Background choices include finite Minerva logo light trails, a slow ambient composition and a solid canvas."
+ },
+ "0.4.48": {
+  "ru": "Встроен локальный 3D-просмотр .litematic из библиотеки схем и установленных файлов каталога. Доступны все слои, диапазон или один слой, управление высотой стрелками, вращение, масштабирование и отдельный светлый/тёмный фон с сохранением выбора. Материалы оформлены отдельным окном: названия на русском и английском, локальные превью текстур блоков, поиск, вся схема или видимые слои, копирование и экспорт .txt в формате item: количество. Префикс minecraft: скрыт, пространства имён модов сохранены. Учитываются поставленные блоки, без пересчёта рецептов.",
+  "en": "Added local 3D .litematic previews from the schematic library and installed catalogue attachments. Choose all layers, an inclusive range or one layer, step through relative heights, orbit/pan/zoom and save an independent light/dark 3D background. Materials now have a dedicated panel with English/Russian names, local block-texture previews, search, whole-schematic or visible-layer counts, clipboard copy and .txt export as item: quantity. Vanilla minecraft: prefixes are hidden while mod namespaces remain. Counts represent placed blocks, without expanding crafting recipes."
+ },
+ "0.4.49": {
+  "ru": "Исправлены иконки материалов в 3D-просмотре: используются настоящие модели и текстуры Minecraft вместо одинаковых кубиков. Вода и лава в списке материалов и экспорте считаются только по источникам. Потоки больше не завышают количество.",
+  "en": "Fixed material icons in 3D previews: actual Minecraft models and textures replace the generic textured cubes. Water and lava counts and exports now include source blocks only. Flowing fluids no longer inflate quantities."
  }
 };
 const originals=new Map([...document.querySelectorAll('[data-text]')].map(e=>[e,e.textContent]));

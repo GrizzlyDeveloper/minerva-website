@@ -1,3 +1,4 @@
+import {applyRelease049} from './help-release-0.4.49.mjs';
 import {applyRelease048} from './help-release-0.4.48.mjs';
 import {applyRelease047} from './help-release-0.4.47.mjs';
 import {applyRelease044} from './help-release-0.4.44.mjs';
@@ -108,4 +109,6 @@ Object.assign(related,{'schematic-catalog':['install-content','multiple-sessions
 for(const a of articles) a.related=related[a.slug] || [a.slug==='first-steps'?'install':'first-steps',a.slug==='contact'?'startup-errors':'contact'];
 applyRelease047(articles);
 applyRelease048(articles);
+applyRelease049(articles);
 export default articles;
+
