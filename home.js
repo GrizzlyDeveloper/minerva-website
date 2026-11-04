@@ -98,6 +98,10 @@ const notes={
  "0.4.49": {
   "ru": "Исправлены иконки материалов в 3D-просмотре: используются настоящие модели и текстуры Minecraft вместо одинаковых кубиков. Вода и лава в списке материалов и экспорте считаются только по источникам. Потоки больше не завышают количество.",
   "en": "Fixed material icons in 3D previews: actual Minecraft models and textures replace the generic textured cubes. Water and lava counts and exports now include source blocks only. Flowing fluids no longer inflate quantities."
+ },
+ "0.4.50": {
+  "ru": "Добавлено оформление Cinematic: мягкая лавандовая палитра, светлый и тёмный варианты, более плавные переходы. Переливающийся фон получил три уровня интенсивности: спокойный, сбалансированный и выразительный. Доступны живой фон, лучи Minerva и однотонный вариант.",
+  "en": "Added Cinematic styling: a soft lavender palette, light and dark variants, and smoother transitions. The flowing background offers Calm, Balanced and Vivid intensity. Ambient, Minerva light trails and Solid backgrounds remain available."
  }
 };
 const originals=new Map([...document.querySelectorAll('[data-text]')].map(e=>[e,e.textContent]));
