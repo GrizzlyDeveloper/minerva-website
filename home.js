@@ -102,6 +102,10 @@ const notes={
  "0.4.50": {
   "ru": "Добавлено оформление Cinematic: мягкая лавандовая палитра, светлый и тёмный варианты, более плавные переходы. Переливающийся фон получил три уровня интенсивности: спокойный, сбалансированный и выразительный. Доступны живой фон, лучи Minerva и однотонный вариант.",
   "en": "Added Cinematic styling: a soft lavender palette, light and dark variants, and smoother transitions. The flowing background offers Calm, Balanced and Vivid intensity. Ambient, Minerva light trails and Solid backgrounds remain available."
+ },
+ "0.4.51": {
+  "ru": "Оформление Cinematic стало целостнее: основные кнопки, выделения, вкладки и фокус используют лавандовую гамму в светлом и тёмном режимах. Логотип в клиентском режиме получил лавандовую палитру. Серверный режим сохраняет жёлтые кнопки и выделения и получил соответствующий логотип.",
+  "en": "Cinematic now uses a consistent lavender palette for primary buttons, selections, tabs and focus indicators in both light and dark modes. Client mode has a lavender logo. Server mode retains yellow actions and selections and now has a matching logo."
  }
 };
 const originals=new Map([...document.querySelectorAll('[data-text]')].map(e=>[e,e.textContent]));
