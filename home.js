@@ -106,6 +106,10 @@ const notes={
  "0.4.51": {
   "ru": "Оформление Cinematic стало целостнее: основные кнопки, выделения, вкладки и фокус используют лавандовую гамму в светлом и тёмном режимах. Логотип в клиентском режиме получил лавандовую палитру. Серверный режим сохраняет жёлтые кнопки и выделения и получил соответствующий логотип.",
   "en": "Cinematic now uses a consistent lavender palette for primary buttons, selections, tabs and focus indicators in both light and dark modes. Client mode has a lavender logo. Server mode retains yellow actions and selections and now has a matching logo."
+ },
+ "0.4.52": {
+  "ru": "Исправлены отступы в разделе «Аккаунты и облако»: заголовок, профили и кнопки больше не прижимаются к рамке панели. Приведены к единому виду поверхности и закреплённые заголовки галереи, библиотеки схематик и других рабочих разделов. Заголовки дней получили внутренние отступы.",
+  "en": "Fixed spacing in Accounts and cloud: the heading, profile rows and buttons no longer touch the panel edges. Unified workspace surfaces and sticky headers in the gallery, schematic library and other sections. Day headings now have proper internal padding."
  }
 };
 const originals=new Map([...document.querySelectorAll('[data-text]')].map(e=>[e,e.textContent]));
