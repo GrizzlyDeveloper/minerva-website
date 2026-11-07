@@ -1,3 +1,13 @@
+import {applyRelease053} from './help-release-0.4.53.mjs';
+import {applyRelease050} from './help-release-0.4.50.mjs';
+import {applyRelease051} from './help-release-0.4.51.mjs';
+import {applyRelease052} from './help-release-0.4.52.mjs';
+import {applyRelease049} from './help-release-0.4.49.mjs';
+import {applyRelease048} from './help-release-0.4.48.mjs';
+import {applyRelease047} from './help-release-0.4.47.mjs';
+import {applyRelease044} from './help-release-0.4.44.mjs';
+import {applyRelease045} from './help-release-0.4.45.mjs';
+import {applyRelease046} from './help-release-0.4.46.mjs';
 // Editorial source. Steps audited against Minerva 0.4.28 source on 2026-10-15;
 // this is not a claim of runtime acceptance of every launcher/source combination.
 const articles=[];
@@ -95,6 +105,19 @@ add("appearance","profiles","скины|плащи|HD|Premium|appearance|skin|ca
 for(const a of articles.filter(a=>a.slug==="appearance")){a.minLauncherVersion="0.4.34";a.verifiedAt='2026-10-19';}
 for(const a of articles.filter(a=>a.slug==='profile-switch')){a.requirements=a.requirements.replace('Fabric 1.21.1 и 1.21.11','Fabric 1.21.1, 1.21.11, 26.2 и 26.3').replace('Fabric 1.21.1 and 1.21.11','Fabric 1.21.1, 1.21.11, 26.2 and 26.3');a.minLauncherVersion='0.4.33';a.verifiedAt='2026-10-19';}
 
+applyRelease044(articles);
+applyRelease045(articles);
+applyRelease046(articles);
 const related={install:['first-steps','updates'], 'migration-modrinth':['migration-tl','backups','startup-errors'],'cloud-save':['manifest','share','cloud-restore'],keybinds:['instance-settings','backups'],repair:['install-content','startup-errors'],resume:['cloud-restore','missing-files'],'warm-return':['profile-switch','offline']};
+Object.assign(related,{'schematic-catalog':['install-content','multiple-sessions'],'multiple-sessions':['warm-return','profile-switch'],'mod-update-dependencies':['install-content','startup-errors']});
 for(const a of articles) a.related=related[a.slug] || [a.slug==='first-steps'?'install':'first-steps',a.slug==='contact'?'startup-errors':'contact'];
+applyRelease047(articles);
+applyRelease048(articles);
+applyRelease049(articles);
+applyRelease050(articles);
+applyRelease051(articles);
+applyRelease052(articles);
+applyRelease053(articles);
 export default articles;
+
+
