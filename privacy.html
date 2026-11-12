@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Политика конфиденциальности Minerva." />
-    <link rel="icon" href="assets/favicon.png" />
+    <link rel="icon" href="/assets/favicon.png?v=brand-20261017" />
     <link rel="stylesheet" href="styles.css?v=22" />
     <link rel="stylesheet" href="reference.css?v=22" />
+    <link rel="stylesheet" href="/help.css?v=studio-2" />
     <title>Конфиденциальность | Minerva</title>
   </head>
   <body class="legal-body" data-page="privacy">
     <header class="site-header legal-header">
       <a class="brand" href="index.html"
-        ><span class="brand-mark" aria-hidden="true">M</span
-        ><span>MINERVA</span></a
+        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="28" height="28" aria-hidden="true" focusable="false"><title>Minerva cube</title><polygon id="left" fill="#00bd78" points="62.01031,176 138.220545,220 138.220545,412 62.01031,368"/><polygon id="center" fill="#087452" points="190.182069,200 280.248711,252 280.248711,466 190.182069,414"/><polygon id="right" fill="#064936" points="449.98969,176 346.066642,236 346.066642,428 449.98969,368"/><polygon id="chevron" fill="#00c982" points="110.507732,126 256,210 401.492268,126 449.98969,154 256,266 62.01031,154"/><polygon id="cap-edge" fill="#087452" points="380.707658,114 256,186 256,191 380.707658,119"/><polygon id="cap" fill="#00c982" points="256,42 380.707658,114 256,186 131.292342,114"/></svg><span>MINERVA</span></a
       >
       <button
         class="nav-toggle"
@@ -39,7 +39,7 @@
     <main class="legal-page">
       <div class="section-kicker">
         <span data-i18n="legal.label">ПРАВОВАЯ ИНФОРМАЦИЯ</span
-        ><span data-i18n="legal.date">Обновлено 27 сентября 2026 года</span>
+        ><span data-i18n="legal.date">Обновлено 15 октября 2026 года</span>
       </div>
       <h1 data-i18n="privacy.title">Политика конфиденциальности</h1>
       <p class="lead" data-i18n="privacy.lead">
@@ -69,26 +69,30 @@
       <section>
         <h2 data-i18n="privacy.storageTitle">Хранение и передача</h2>
         <p data-i18n="privacy.storageCopy">
-          Minerva не использует собственный сервер аккаунтов. Состояние
-          приложения и данные авторизации хранятся на устройстве пользователя.
-          Авторизация обращается к сервисам Microsoft, Xbox Live и Minecraft
-          Services. Каталог использует Modrinth и CurseForge; запросы метаданных
-          CurseForge проходят через сервис Minerva, а файлы загружаются по
-          разрешённым ссылкам источника.
+          Игровые профили и файлы сборок хранятся на вашем устройстве. Вход в
+          лицензионный профиль использует сервисы Microsoft и Minecraft.
+          Отдельный аккаунт Minerva, команды и общие карты обслуживаются на
+          minervalauncher.com. Позиция передаётся команде только при включённой
+          видимости соответствующего игрового профиля. Каталог использует
+          Modrinth и CurseForge; метаданные CurseForge проходят через сервис Minerva.
         </p>
       </section>
       <section>
         <h2 data-i18n="privacy.telemetryTitle">Телеметрия</h2>
         <p data-i18n="privacy.telemetryCopy">
-          Minerva не собирает аналитику, рекламные идентификаторы, игровую
-          активность или фоновую телеметрию. Локальные диагностические логи не
-          загружаются автоматически.
+          Сервер загрузок хранит суточные суммарные счётчики проверок обновлений,
+          начатых и завершённых передач, ошибок передачи и объёма файлов по
+          версии, каналу и источнику загрузки, до 400 дней. Эти счётчики не
+          содержат IP, имени, UUID игрока, cookies или постоянного идентификатора
+          устройства; они не определяют число уникальных людей и установок.
+          Технические журналы внешнего прокси могут содержать IP согласно его
+          настройкам хранения. Локальные диагностические логи не отправляются автоматически.
         </p>
       </section>
       <section>
         <h2 data-i18n="privacy.passwordTitle">Пароли и владение игрой</h2>
         <p data-i18n="privacy.passwordCopy">
-          Пароль аккаунта вводится только на страницах Microsoft и недоступен
+          Пароль Microsoft вводится только на страницах Microsoft и недоступен
           Minerva. Отдельные локальные/offline-профили не предоставляют доступ к
           серверам, требующим лицензию. Для лицензионного профиля сохраняется
           требование Microsoft-авторизации.
@@ -97,9 +101,14 @@
       <section>
         <h2 data-i18n="privacy.devTitle">Статус разработки</h2>
         <p data-i18n="privacy.devCopy">
-          Minerva 0.4.22 распространяется как публичная бета-версия. Установщик
+          Minerva распространяется как публичная бета-версия. Установщик
           пока не имеет цифровой подписи для Windows.
         </p>
+      </section>
+      <section>
+        <h2 data-i18n="privacy.supportTitle">Обращения и защита от злоупотреблений</h2>
+        <p data-i18n="privacy.supportCopy">Сервис хранит тему, категорию, текст переписки, язык, указанную версию Minerva, безопасный путь страницы и время сообщений. У авторизованных пользователей обращение связано с аккаунтом; для гостя хранится хеш секрета приватной ссылки. Сообщения доступны владельцу сервиса и не являются анонимной телеметрией. Контакты, вложения и автоматические скриншоты не собираются. E-mail и Telegram не подключены.</p>
+        <p data-i18n="privacy.retentionCopy">Локальная начальная политика: решённые и архивные обращения хранятся до 180 дней после последней активности, спам — 30 дней; открытые обращения остаются до решения/удаления в пределах общей очереди. Временные хешированные сетевые ключи ограничений хранятся до часа, ключи повторной отправки — сутки. Проверка сроков выполняется при записи и каждый час. Сроки настраиваются оператором. Для удаления напишите владельцу в своей переписке; автоматическое удаление из старых резервных копий не гарантируется, оно зависит от их ротации. Эти изменения требуют согласования перед публикацией.</p>
       </section>
       <section>
         <h2 data-i18n="legal.contact">Связь</h2>
@@ -112,7 +121,7 @@
           >.
         </p>
       </section>
-      <script src="script.js?v=22"></script>
+      <script src="script.js?v=help-support-20261015"></script>
     </main>
   </body>
 </html>

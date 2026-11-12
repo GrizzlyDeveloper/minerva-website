@@ -1,3 +1,110 @@
-.help-main{max-width:1160px;margin:0 auto;padding:48px 24px 96px;min-height:65vh}.help-main h1{font-size:40px;line-height:1.2;max-width:28ch}.help-main p,.help-main li{max-width:75ch}.help-article{max-width:82ch}.help-article section{padding:24px 0;border-top:1px solid #39393e;scroll-margin-top:24px}.help-article h2{font-size:24px;margin-bottom:12px}.help-article p{color:#c3c3cc}.help-article li{padding:6px 0 6px 8px}.help-main a{color:#9fddb9}.toc{margin:24px 0;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:flex-start;font-size:14px}.breadcrumbs{font-size:14px;color:#aaa}.help-search{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:32px 0}.help-search label{width:100%}.help-search input{flex:1;min-width:180px}.help-search input,.help-search select,.help-search button,.help-main button{background:#232327;color:#eee;border:1px solid #52525b;padding:12px;border-radius:6px;max-width:100%}.help-search input:focus-visible,.help-search select:focus-visible{outline:2px solid #5bdb8c;outline-offset:3px}.help-results{display:grid;grid-template-columns:1fr 1fr;gap:24px 32px}.help-results article{border-top:1px solid #39393e;padding:24px 0}.help-results h2{font-size:21px;margin:0 0 12px}.help-results .eyebrow{margin-bottom:8px}.help-results p{color:#bdbdc6}.help-main footer{padding:24px 0}.help-search select{min-width:200px}
-@media(max-width:700px){.help-main{padding:32px 24px 100px}.help-main h1{font-size:30px}.help-results{grid-template-columns:1fr;gap:0}.help-search select{width:100%}.toc{margin-left:0}.help-article ol{padding-left:22px}}
-mark{background:#294a36;color:#e9fbed;padding:0 2px;border-radius:2px}
+/* Hallmark · shape: app screen · genre: atmospheric · theme: Minerva brand · redesign: restyle
+ * nav: Minerva header · signature: searchable guides and readable articles · axes: dark/grotesk-sans/chromatic-green · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V3 · weakest: V, guide pages repeat a clear reading rhythm. */
+
+:root {
+  --help-bg: #080c0b;
+  --help-surface: #0e1512;
+  --help-raised: #16201a;
+  --help-ink: #edf5ef;
+  --help-muted: #aab8af;
+  --help-line: #ffffff13;
+  --help-edge: #4d6857;
+  --help-accent: #78efb3;
+  --help-accent-ink: #082719;
+  --help-highlight: #294a36;
+  --help-font: Inter, "Segoe UI", Arial, sans-serif;
+  --help-ease: cubic-bezier(.2,.7,.2,1);
+}
+html, body { overflow-x: clip; }
+.help-page > header, .legal-body > header { background: var(--help-surface); backdrop-filter: none; }
+.help-page > header nav a[aria-current] { color: var(--help-accent); }
+.help-main {
+  width: min(1240px, calc(100% - 48px));
+  min-height: 65vh;
+  margin-inline: auto;
+  padding-block: 64px 96px;
+}
+.help-main h1, .legal-page h1 { min-width: 0; max-width: 24ch; overflow-wrap: break-word; text-wrap: balance; }
+.help-main h1 { font-size: clamp(2.25rem, 5vw, 4.5rem); line-height: 1.08; letter-spacing: -.04em; margin-bottom: 24px; }
+.help-main a, .legal-page a { color: var(--help-accent); }
+.help-main a:hover, .legal-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.help-main p, .help-main li { max-width: 75ch; }
+.help-article { max-width: 82ch; }
+.help-article section { padding-block: 24px; border-top: 1px solid var(--help-line); scroll-margin-top: 24px; }
+.help-article h2 { font-size: 1.5rem; margin-bottom: 12px; }
+.help-article p, .help-meta, .breadcrumbs { color: var(--help-muted); }
+.help-meta { display: flex; gap: 8px 16px; flex-wrap: wrap; margin: 0 0 24px; padding: 0; list-style: none; font-size: .875rem; }
+.help-article li { margin-block: 8px; }
+.related-guides { padding-inline-start: 24px; }
+.toc {
+  margin: 24px 0;
+  padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  justify-content: flex-start;
+  width: auto;
+  color: var(--help-ink);
+  background: var(--help-surface);
+  border-radius: 8px;
+  font-size: .875rem;
+}
+.breadcrumbs { font-size: .875rem; }
+.help-search { display: grid; grid-template-columns: minmax(0,2fr) auto minmax(0,1fr); gap: 8px 12px; align-items: end; margin-block: 32px; }
+.help-search label { grid-column: 1 / -1; color: var(--help-muted); }
+.help-search :is(input,select,button), .help-main .support-kit :is(input,select,textarea,button) {
+  min-height: 44px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--help-edge);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--help-ink);
+  background: var(--help-surface);
+}
+.help-main :is(a,input,select,textarea,button):focus-visible, .legal-body :is(a,button):focus-visible { outline: 2px solid var(--help-accent); outline-offset: 4px; }
+.help-main button:hover { background: var(--help-raised); }
+.help-main button:active { transform: translateY(1px); }
+.help-main button:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+.help-results { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px 24px; }
+.help-results article { border-top: 1px solid var(--help-line); padding-block: 24px; min-width: 0; }
+.help-results h2 { font-size: 1.25rem; margin: 0 0 8px; overflow-wrap: break-word; text-wrap: balance; }
+.help-results p { color: var(--help-muted); }
+.help-results .guide-category { font-size: .875rem; margin-bottom: 0; }
+.help-main mark { background: var(--help-highlight); color: var(--help-ink); padding-inline: 2px; }
+.help-main .support-kit { font: inherit; color: var(--help-ink); }
+.help-main .support-kit form { max-width: 680px; }
+.help-main .support-kit .support-note { color: var(--help-muted); }
+.help-main .support-kit button[type=submit] { color: var(--help-accent-ink); background: var(--help-accent); border-color: var(--help-accent); }
+.help-main .support-message { border-color: var(--help-line); }
+.support-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 280px); align-items: start; gap: clamp(24px, 6vw, 88px); }
+.support-workspace.support-kit { display: block; }
+.support-resources { min-width: 0; padding-block: 16px; border-top: 1px solid var(--help-line); }
+.support-resources h2 { font-size: 1.25rem; margin-bottom: 8px; }
+.support-resources p { color: var(--help-muted); }
+.help-page:has(.support-workspace) .support-widget { display: none; }
+.help-main h1, .help-article .toc { animation: help-entry 420ms var(--help-ease) both; }
+@keyframes help-entry { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.legal-body { background: var(--help-bg); color: var(--help-ink); font-family: var(--help-font); }
+.legal-body .legal-header { top: 0; border-color: var(--help-line); }
+.legal-body .legal-header a { color: var(--help-ink); }
+.legal-body .legal-page { width: min(76ch,calc(100% - 48px)); }
+.legal-body .legal-page h1 { font-size: clamp(2.25rem,5.2vw,4.25rem); }
+.legal-body .legal-page :is(.lead,p,li) { color: var(--help-muted); font-size: 1rem; }
+.legal-body .legal-page .section-kicker { color: var(--help-muted); letter-spacing: 0; text-transform: none; }
+.legal-body .legal-page section { border-color: var(--help-line); }
+@media (max-width: 700px) {
+  .help-main { width: calc(100% - 32px); padding-block: 40px 96px; }
+  .help-search { grid-template-columns: minmax(0,1fr) auto; }
+  .help-search select { grid-column: 1 / -1; width: 100%; }
+  .help-results { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .help-page > header nav { justify-content: flex-start; flex-wrap: wrap; }
+  .toc { padding-inline: 16px; }
+  .support-workspace { grid-template-columns: minmax(0,1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .help-main h1, .help-article .toc { animation: none; }
+  .help-main button:active { transform: none; }
+}
